@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hyun-design-system
 
-## Getting Started
+[![Contributors](https://img.shields.io/badge/contributors-1-blue.svg?style=flat)](#contributors-)
 
-First, run the development server:
+## 프로젝트 목록
 
-```bash
+- [프로젝트 설명](#프로젝트-설명)
+- [기술 스텍](#기술-스텍)
+- [프로젝트 설치](#프로젝트-설치)
+- [프로젝트 운영](#프로젝트-운영)
+
+## 프로젝트 설명
+
+Hyun-Design-System : 프로젝트에서 컴포넌트를 재사용 하기 위한 디자인 시스템
+
+## 기술 스텍
+
+Front End Team Repository :
+
+| STACKS                          | BADGE                                                                                                                                                                                                                                                                                            |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Browsers                        | ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=flat&logo=GoogleChrome&logoColor=white)                                                                                                                                                                               |
+| IDEs/Editors                    | ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flat&logo=visual-studio-code&logoColor=white)                                                                                                                                                         |
+| Programe Language               | ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%233178C6.svg?style=flat&logo=typescript&logoColor=%23FFFFFF)                                                          |
+| FrameWork Platforms & Libraries | ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=flat&logo=npm&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) |
+
+## 프로젝트 설치
+
+> URL : https://github.com/dongggggae/hyun-design-system
+
+Install the dependencies and devDependencies and start the server.
+
+1. git clone https://github.com/dongggggae/hyun-design-system
+2. npm install
+3. npm run dev
+
+## 프로젝트 운영
+
+`package.json` - script
+
+- dev : "next dev"
+- build : "next build"
+- start : "next start"
+- lint : "next lint"
+
+### Local Server :
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+npm run build
