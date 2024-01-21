@@ -1,0 +1,77 @@
+$badges: ();
+$badges: map-merge(
+  (
+    'success': (
+      'bg': $green600,
+      'border-color': $green600,
+      'color': $white,
+    ),
+    'warn': (
+      'bg': $amber600,
+      'border-color': $amber700,
+      'color': $white,
+    ),
+    'error': (
+      'bg': $red600,
+      'border-color': $red600,
+      'color': $white,
+    ),
+    'information': (
+      'bg': $navy600,
+      'border-color': $navy600,
+      'color': $white,
+    ),
+    'outline-success': (
+      'bg': $white,
+      'border-color': $green600,
+      'color': $green600,
+    ),
+    'outline-warn': (
+      'bg': $white,
+      'border-color': $amber700,
+      'color': $amber700,
+    ),
+    'outline-error': (
+      'bg': $white,
+      'border-color': $red600,
+      'color': $red600,
+    ),
+    'outline-information': (
+      'bg': $white,
+      'border-color': $navy600,
+      'color': $navy600,
+    ),
+  ),
+  $badges
+);
+
+.badge {
+  --#{$prefix}badge-height: #{$badges-height};
+  --#{$prefix}badge-padding-y: #{$badges-padding-y};
+  --#{$prefix}badge-padding-x: #{$badges-padding-x};
+  --#{$prefix}badge-bg: #{$badges-bg};
+  --#{$prefix}badge-border-width: #{$badges-border-width};
+  --#{$prefix}badge-border-color: #{$badges-bg};
+  --#{$prefix}badge-border-radius: #{$badges-border-radius};
+  --#{$prefix}badge-color: #{$badges-color};
+  --#{$prefix}badge-text-font-size: #{$badges-text-font-size};
+  --#{$prefix}badge-text-line-height: #{$badges-text-line-height};
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--#{$prefix}badge-height);
+  padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);
+  background-color: var(--#{$prefix}badge-bg);
+  border-width: var(--#{$prefix}badge-border-width);
+  border-style: solid;
+  border-color: var(--#{$prefix}badge-border-color);
+  border-radius: var(--#{$prefix}badge-border-radius);
+  color: var(--#{$prefix}badge-color);
+  font-size: var(--#{$prefix}badge-text-font-size);
+  line-height: var(--#{$prefix}badge-text-line-height);
+  text-align: center;
+  font-family: inherit;
+  white-space: nowrap;
+  vertical-align: text-bottom;
+}

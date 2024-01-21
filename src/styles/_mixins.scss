@@ -1,0 +1,39 @@
+// Badge
+@mixin generate-badge($args...) {
+  @each $key, $value in keywords($args) {
+    --#{$prefix}badge-#{$key}: #{$value};
+  }
+}
+
+// Button
+@mixin generate-button($args...) {
+  @each $key, $value in keywords($args) {
+    --#{$prefix}btn-#{$key}: #{$value};
+  }
+}
+
+// Icon
+@mixin generate-icon($icons) {
+  .icon {
+    @each $key, $value in $icons {
+      $class: map-get($value, class);
+      $image: map-get($value, image);
+      $variant: map-get($value, variant);
+
+      --icon-#{$class}: #{escape-svg(#{$image})};
+
+      &__#{$class} {
+        &::after {
+          content: '';
+          @if ($variant == 'none') {
+            background-image: var(--icon-#{$class});
+            background-color: transparent;
+          } @else {
+            -webkit-mask-image: var(--icon-#{$class});
+            mask-image: var(--icon-#{$class});
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+// forms
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  border: $form-control-border-width solid $form-control-border-color;
+  border-radius: $form-control-border-radius;
+
+  &:focus-within {
+    border-color: $form-control-focus-border-color;
+  }
+
+  &__addon {
+    display: flex;
+    align-items: center;
+    margin: $input-wrap-addon-margin;
+    padding-right: 6px;
+  }
+}
+
+.form__control {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-y;
+  border: none;
+  border-radius: $form-control-border-radius;
+  font-size: $form-control-font-size;
+  line-height: $form-control-font-line-height;
+  color: $input-color;
+  outline: none;
+  z-index: $form-control-zindex;
+}
+
+.form-group {
+  width: 100%;
+  position: relative;
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: $form-label-font-size;
+  line-height: $form-label-font-line-height;
+  color: $form-label-color;
+}

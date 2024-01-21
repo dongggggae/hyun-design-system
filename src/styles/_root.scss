@@ -1,0 +1,10 @@
+// Root
+
+:root {
+  @each $key, $value in $root-color {
+    --#{$key}: #{$value};
+  }
+  @each $key, $value in $root-space {
+    --#{$prefix}#{$key}: #{$value};
+  }
+}
