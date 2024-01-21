@@ -1,0 +1,151 @@
+.modal {
+  --#{$prefix}modal-width: #{$modal-width};
+  --#{$prefix}modal-zindex: #{$modal-zindex};
+  --#{$prefix}modal-border-width: #{$modal-border-width};
+  --#{$prefix}modal-dialog-margin-y: #{$modal-dialog-margin-y};
+  --#{$prefix}modal-dialog-margin-x: #{$modal-dialog-margin-x};
+  --#{$prefix}modal-content-border-color: #{$modal-content-border-color};
+  --#{$prefix}modal-content-border-radius: #{$modal-content-border-radius};
+  --#{$prefix}modal-header-padding-x: #{$modal-header-padding-x};
+  --#{$prefix}modal-header-padding-y: #{$modal-header-padding-y};
+  --#{$prefix}modal-header-border-width: #{$modal-header-border-width};
+  --#{$prefix}modal-header-border-color: #{$modal-header-border-color};
+  --#{$prefix}modal-header-button-padding-x: #{$modal-header-button-padding-x};
+  --#{$prefix}modal-header-button-padding-y: #{$modal-header-button-padding-y};
+  --#{$prefix}modal-header-button-bg: #{$modal-header-button-bg};
+  --#{$prefix}modal-body-margin-bottom: #{$modal-body-margin-bottom};
+  --#{$prefix}modal-body-padding-x: #{$modal-body-padding-x};
+  --#{$prefix}modal-body-padding-y: #{$modal-body-padding-y};
+  --#{$prefix}modal-footer-gap: #{$modal-footer-gap};
+  --#{$prefix}modal-footer-padding-x: #{$modal-footer-padding-x};
+  --#{$prefix}modal-footer-padding-y: #{$modal-footer-padding-y};
+  --#{$prefix}modal-footer-border-width: #{$modal-header-border-width};
+  --#{$prefix}modal-footer-border-color: #{$modal-footer-border-color};
+
+  display: none;
+  overflow: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: $overlay;
+  z-index: var(--#{$prefix}modal-zindex);
+
+  &.show {
+    display: block;
+  }
+
+  &__dialog {
+    position: relative;
+    max-width: var(--#{$prefix}modal-width);
+    margin-top: var(--#{$prefix}modal-dialog-margin-y);
+    margin-right: var(--#{$prefix}modal-dialog-margin-x);
+    margin-bottom: var(--#{$prefix}modal-dialog-margin-y);
+    margin-left: var(--#{$prefix}modal-dialog-margin-x);
+
+    @each $size, $object in $modal-sizes {
+      &--#{$size} {
+        @each $prop, $value in $object {
+          --#{$prefix}modal-#{$prop}: #{$value};
+        }
+      }
+    }
+
+    &--center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100% - var(--#{$prefix}modal-dialog-margin-y) * 2);
+    }
+
+    &--scrollable {
+      height: calc(100% - var(--#{$prefix}modal-dialog-margin-y) * 2);
+
+      .modal__content {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .modal__body {
+        overflow-y: auto;
+      }
+    }
+
+    &--fullscreen {
+      width: 100vw;
+      max-width: none;
+      height: 100%;
+      margin: 0;
+
+      .modal__content {
+        height: 100%;
+        border: none;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-width: var(--#{$prefix}modal-content-border-width);
+    border-style: solid;
+    border-color: var(--#{$prefix}modal-content-border-color);
+    border-radius: var(--#{$prefix}modal-content-border-radius);
+    background-color: #fff;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--#{$prefix}modal-header-padding-y);
+    padding-right: var(--#{$prefix}modal-header-padding-x);
+    padding-bottom: var(--#{$prefix}modal-header-padding-y);
+    padding-left: var(--#{$prefix}modal-header-padding-x);
+    border-bottom-width: var(--#{$prefix}modal-header-border-width);
+    border-style: solid;
+    border-color: var(--#{$prefix}modal-header-border-color);
+
+    button {
+      padding: var(--#{$prefix}modal-header-button-padding-y) var(--#{$prefix}modal-header-button-padding-x);
+      background-color: var(--#{$prefix}modal-header-button-bg);
+      border-color: var(--#{$prefix}modal-header-button-bg);
+    }
+  }
+
+  &__body {
+    position: relative;
+    flex: 1 1 auto;
+    margin-bottom: var(--#{$prefix}modal-body-margin-bottom);
+    padding-top: var(--#{$prefix}modal-header-padding-y);
+    padding-right: var(--#{$prefix}modal-header-padding-x);
+    padding-bottom: var(--#{$prefix}modal-header-padding-y);
+    padding-left: var(--#{$prefix}modal-header-padding-x);
+
+    > *:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: var(--#{$prefix}modal-footer-padding-y);
+    padding-right: var(--#{$prefix}modal-footer-padding-x);
+    padding-bottom: var(--#{$prefix}modal-footer-padding-y);
+    padding-left: var(--#{$prefix}modal-footer-padding-x);
+    border-top-width: var(--#{$prefix}modal-footer-border-width);
+    border-style: solid;
+    border-color: var(--#{$prefix}modal-footer-border-color);
+
+    > * {
+      margin: calc(var(--#{$prefix}modal-footer-gap) * 0.5);
+    }
+  }
+}

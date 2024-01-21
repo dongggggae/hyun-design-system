@@ -1,0 +1,85 @@
+// Table
+
+.table {
+  --#{$prefix}table-bg: #{$table-bg};
+  --#{$prefix}table-border-width: #{$table-border-width};
+  --#{$prefix}table-border-color: #{$table-border-color};
+  --#{$prefix}table-color: #{$table-color};
+  --#{$prefix}table-cell-padding-x: #{$table-cell-padding-x};
+  --#{$prefix}table-cell-padding-y: #{$table-cell-padding-y};
+  --#{$prefix}table-cell-text-align: #{$table-cell-text-align};
+  --#{$prefix}table-cell-vertical-align: #{$table-cell-vertical-align};
+  --#{$prefix}table-cell-font-weight: #{$table-cell-font-weight};
+  --#{$prefix}table-th-cell-padding-x: #{$table-th-cell-padding-x};
+  --#{$prefix}table-th-cell-padding-y: #{$table-th-cell-padding-y};
+  --#{$prefix}table-th-cell-color: #{$table-th-cell-color};
+  --#{$prefix}table-th-cell-font-weight: #{$table-th-cell-font-weight};
+  --#{$prefix}table-active-bg: #{$table-active-bg};
+  --#{$prefix}table-hover-bg: #{$table-hover-bg};
+
+  width: 100%;
+  background-color: var(--#{$prefix}table-bg);
+  border-top-width: var(--#{$prefix}table-border-width);
+  border-top-style: solid;
+  border-top-color: var(--#{$prefix}table-border-color);
+  color: var(--#{$prefix}table-color);
+
+  caption {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  > :not(caption) > * > * {
+    padding-top: var(--#{$prefix}table-cell-padding-y);
+    padding-right: var(--#{$prefix}table-cell-padding-x);
+    padding-bottom: var(--#{$prefix}table-cell-padding-y);
+    padding-left: var(--#{$prefix}table-cell-padding-x);
+    background-color: var(--#{$prefix}table-bg);
+    border-bottom-width: var(--#{$prefix}table-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: var(--#{$prefix}table-border-color);
+    vertical-align: var(--#{$prefix}table-cell-vertical-align);
+    text-align: var(--#{$prefix}table-cell-text-align);
+  }
+
+  th,
+  td {
+    border-left-width: var(--#{$prefix}table-border-width);
+    border-left-style: solid;
+    border-left-color: var(--#{$prefix}table-border-color);
+
+    &.active {
+      background-color: var(--#{$prefix}table-active-bg);
+    }
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  > thead {
+    th {
+      color: var(--#{$prefix}table-th-cell-color);
+      font-weight: var(--#{$prefix}table-th-cell-font-weight);
+    }
+  }
+
+  > tbody {
+    th {
+      color: var(--#{$prefix}table-th-cell-color);
+    }
+  }
+
+  &--hover {
+    > tbody > tr:hover > * {
+      background-color: var(--#{$prefix}table-hover-bg);
+    }
+  }
+}

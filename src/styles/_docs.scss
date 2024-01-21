@@ -1,0 +1,119 @@
+// layouts
+
+.docs {
+  .docs-text,
+  .docs-heading {
+    .component-content {
+      .preview {
+        flex-direction: column;
+        align-items: start;
+
+        .text {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .docs-badge {
+    .badge__wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  .docs-button {
+    .preview .btn__icon {
+      background-color: $green600;
+    }
+  }
+
+  .docs-color {
+    .color__wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .color__unit {
+      position: relative;
+      flex: 1;
+      min-width: 120px;
+      height: 90px;
+
+      .color__box {
+        width: 100%;
+        height: 40px;
+      }
+    }
+  }
+
+  .docs-table {
+    .code-box {
+      display: flex;
+      gap: 10px;
+
+      .code__container {
+        flex: 1;
+      }
+    }
+  }
+
+  .docs-tab {
+    .component-content {
+      .preview {
+        gap: 50px;
+        flex-direction: column;
+        align-items: normal;
+      }
+    }
+  }
+
+  .text {
+    margin-bottom: 15px;
+  }
+
+  .component-content {
+    margin-bottom: 50px;
+
+    .preview {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 30px;
+      background-color: $gray100;
+      border: 2px solid $gray200;
+      border-radius: 5px;
+
+      &.fill {
+        > * {
+          flex: 1 1 0;
+        }
+      }
+    }
+
+    .icon-preview {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      column-gap: 15px;
+      row-gap: 15px;
+      background-color: $gray150;
+      border-radius: 5px;
+
+      .text {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  hr {
+    margin: 16px 0;
+    border-top: 1px solid $black;
+  }
+}

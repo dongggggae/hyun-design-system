@@ -1,0 +1,11 @@
+@each $file, $value in $font-face-files {
+  $weight: nth($value, 1);
+  $style: nth($value, 2);
+
+  @font-face {
+    font-family: unquote($font-face-name);
+    font-weight: $weight;
+    font-style: $style;
+    src: url(quote('#{$font-face-path}#{$font-face-name}#{$file}.#{$font-face-exts}')) format('woff');
+  }
+}

@@ -1,0 +1,155 @@
+// Sidebar
+.sidebar {
+  --#{$prefix}sidebar-width: 210px;
+  --#{$prefix}sidebar-padding-x: 0;
+  --#{$prefix}sidebar-padding-y: 0;
+  --#{$prefix}sidebar-bg: #{$white};
+  --#{$prefix}sidebar-border-width: 2px;
+  --#{$prefix}sidebar-border-style: solid;
+  --#{$prefix}sidebar-border-color: #{$gray200};
+  --#{$prefix}sidebar-navigation-padding-x: 20px;
+  --#{$prefix}sidebar-navigation-padding-y: 30px;
+  --#{$prefix}sidebar-nav-link-bg: transparent;
+  --#{$prefix}sidebar-nav-link-color: #{$blue500};
+  --#{$prefix}sidebar-nav-link-active-color: #{$blue700};
+  --#{$prefix}sidebar-nav-group-items-padding-y: 0;
+  --#{$prefix}sidebar-nav-group-items-padding-x: 0;
+
+  position: fixed;
+  top: #{$layout-occupy-start-top};
+  left: 0;
+  bottom: 0;
+  width: var(--#{$prefix}sidebar-width);
+  background-color: var(--#{$prefix}sidebar-bg);
+  border-right: var(--#{$prefix}sidebar-border-width) var(--#{$prefix}sidebar-border-style)
+    var(--#{$prefix}sidebar-border-color);
+  z-index: $zindex-layout-sidebar;
+
+  .navigation {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: var(--#{$prefix}sidebar-navigation-padding-y) var(--#{$prefix}sidebar-navigation-padding-x);
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    & .nav__group {
+      position: relative;
+      transition: all 0.15s ease-in-out;
+
+      & > .nav__link {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          margin-right: 5px;
+          .icon {
+            transition: 0.15s ease-in-out;
+          }
+        }
+      }
+
+      &-items {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin-top: 10px;
+        padding: var(--#{$prefix}sidebar-nav-group-items-padding-y) var(--#{$prefix}sidebar-nav-group-items-padding-x);
+        transition: height 0.15s ease-in-out;
+
+        & > li {
+          margin-top: 10px;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+
+        .nav__link {
+          padding-left: 10px;
+          font-size: 18px;
+        }
+      }
+
+      &:not(.show) .nav__group-items {
+        display: none;
+      }
+
+      &.show > .nav__link {
+        color: var(--#{$prefix}sidebar-nav-link-active-color);
+
+        .icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    & > li {
+      margin-top: 15px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    & .nav__link {
+      display: flex;
+      align-items: center;
+      color: var(--#{$prefix}sidebar-nav-link-color);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 26px;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &.active {
+        color: var(--#{$prefix}sidebar-nav-link-active-color);
+      }
+    }
+  }
+}
+
+// Header
+.header {
+  --#{$prefix}header-width: 100%;
+  --#{$prefix}header-height: 70px;
+  --#{$prefix}header-bg: hsla(0, 0%, 100%, 0.9);
+  --#{$prefix}header-border-width: 2px;
+  --#{$prefix}header-border-style: solid;
+  --#{$prefix}header-border-color: #{$gray200};
+  --#{$prefix}header-color: #{$black};
+
+  position: fixed;
+  top: 0;
+  width: var(--#{$prefix}header-width);
+  height: var(--#{$prefix}header-height);
+  background-color: var(--#{$prefix}header-bg);
+  border-bottom: var(--#{$prefix}header-border-width) var(--#{$prefix}header-border-style)
+    var(--#{$prefix}header-border-color);
+  color: var(--#{$prefix}header-color);
+  z-index: $zindex-layout-header;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    height: 100%;
+  }
+}
+
+// Main
+.main {
+  --#{$prefix}main-padding-y: 20px;
+  --#{$prefix}main-padding-left: 25px;
+  --#{$prefix}main-padding-right: 10px;
+
+  position: relative;
+  margin-top: #{$layout-occupy-start-top};
+  margin-left: #{$layout-occupy-start-left};
+  padding: var(--#{$prefix}main-padding-y) var(--#{$prefix}main-padding-right) var(--#{$prefix}main-padding-y)
+    var(--#{$prefix}main-padding-left);
+}

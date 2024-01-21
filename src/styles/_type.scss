@@ -1,0 +1,47 @@
+// Typography
+
+// Heading
+%heading {
+  letter-spacing: $letter-spacing-base;
+  color: $heading-font-color-base;
+}
+
+@each $heading, $props in $heading-sizes {
+  #{$heading},
+  .#{$heading} {
+    font-size: nth($props, 1);
+    line-height: nth($props, 2);
+    font-weight: nth($props, 3);
+    @extend %heading;
+  }
+}
+
+// Text
+%text {
+  letter-spacing: $letter-spacing-base;
+  color: $text-font-color-base;
+}
+
+@each $size, $props in $text-sizes {
+  .text--#{$size} {
+    font-size: nth($props, 1);
+    line-height: nth($props, 2);
+    @extend %text;
+  }
+
+  @each $weight, $value in $font-weights {
+    .text--#{$size}-#{$weight} {
+      font-size: nth($props, 1);
+      line-height: nth($props, 2);
+      font-weight: $value;
+      @extend %text;
+    }
+  }
+}
+
+// Font Color
+@each $color, $props in $font-colors {
+  .fc--#{$color} {
+    color: $props;
+  }
+}

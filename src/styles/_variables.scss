@@ -1,0 +1,471 @@
+// Variables
+
+// Colors
+$white: #ffffff;
+$gray100: #fcfcfc;
+$gray150: #f5f5f5;
+$gray200: #efefef;
+$gray250: #e8e8e8;
+$gray300: #dfdfdf;
+$gray350: #c8c8c8;
+$gray400: #b7b7b7;
+$gray500: #949494;
+$gray600: #777777;
+$gray650: #616161;
+$gray700: #555555;
+$gray750: #3f3f3f;
+$gray800: #2a2a2a;
+$gray850: #1f1f1f;
+$gray900: #111111;
+$black: #000000;
+$red400: #ff96a3;
+$red500: #ff697a;
+$red600: #ff334b;
+$red700: #e5172f;
+$red800: #c9162b;
+$amber400: #ffeb94;
+$amber500: #ffd86b;
+$amber600: #ffc53d;
+$amber700: #fcb321;
+$amber800: #fa9e1e;
+$green400: #6de67b;
+$green500: #5bdd6a;
+$green600: #06c755;
+$green700: #3d9e43;
+$green800: #1e6e1e;
+$blue300: #c2d2ff;
+$blue400: #96b2ff;
+$blue500: #638dff;
+$blue600: #4d73ff;
+$blue700: #2f59cc;
+$navy400: #c8cfdc;
+$navy500: #98a0b3;
+$navy600: #707991;
+$navy700: #464f69;
+$navy800: #323b54;
+$navy900: #202a43;
+$overlay: rgba(0, 0, 0, 0.2);
+
+$root-color: ();
+$root-color: map-merge(
+  (
+    'white': #{$white},
+    'gray100': #{$gray100},
+    'gray150': #{$gray150},
+    'gray200': #{$gray200},
+    'gray250': #{$gray250},
+    'gray300': #{$gray300},
+    'gray350': #{$gray350},
+    'gray400': #{$gray400},
+    'gray500': #{$gray500},
+    'gray600': #{$gray600},
+    'gray650': #{$gray650},
+    'gray700': #{$gray700},
+    'gray750': #{$gray750},
+    'gray800': #{$gray800},
+    'gray850': #{$gray850},
+    'gray900': #{$gray900},
+    'black': #{$black},
+    'red400': #{$red400},
+    'red500': #{$red500},
+    'red600': #{$red600},
+    'red700': #{$red700},
+    'red800': #{$red800},
+    'amber400': #{$amber400},
+    'amber500': #{$amber500},
+    'amber600': #{$amber600},
+    'amber700': #{$amber700},
+    'amber800': #{$amber800},
+    'green400': #{$green400},
+    'green500': #{$green500},
+    'green600': #{$green600},
+    'green700': #{$green700},
+    'green800': #{$green800},
+    'blue300': #{$blue300},
+    'blue400': #{$blue400},
+    'blue500': #{$blue500},
+    'blue600': #{$blue600},
+    'blue700': #{$blue700},
+    'navy400': #{$navy400},
+    'navy500': #{$navy500},
+    'navy600': #{$navy600},
+    'navy700': #{$navy700},
+    'navy800': #{$navy800},
+    'navy900': #{$navy900},
+    'surface': #{$white},
+    'primary-text': #{$gray900},
+    'secondary-text': #{$gray700},
+    'tertiary-text': #{$gray500},
+    'overlay': #{$overlay},
+    'information': #{$blue600},
+    'positive': #{$green600},
+    'caution': #{$amber600},
+    'negative': #{$red600},
+  ),
+  $root-color
+);
+
+$spacing-base: 16px;
+$root-space: ();
+$root-space: map-merge(
+  (
+    'spacing0': $spacing-base * 0,
+    'spacing1': $spacing-base * 0.25,
+    'spacing2': $spacing-base * 0.5,
+    'spacing3': $spacing-base * 0.75,
+    'spacing4': $spacing-base,
+    'spacing5': $spacing-base * 1.25,
+    'spacing6': $spacing-base * 1.5,
+    'spacing7': $spacing-base * 2,
+    'spacing8': $spacing-base * 2.5,
+    'spacing9': $spacing-base * 3,
+    'spacing10': $spacing-base * 3.5,
+    'spacing11': $spacing-base * 4,
+    'spacing12': $spacing-base * 4.5,
+    'spacing13': $spacing-base * 5,
+    'spacing14': $spacing-base * 6,
+  ),
+  $root-space
+);
+
+// 이스케이프 처리 문자세트
+$escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23'), ('(', '%28'), (')', '%29')) !default;
+
+// PREFIX
+$prefix: hds-;
+
+// Font Face
+$font-face-name: AppleSDGothicNeo;
+$font-face-path: '/fonts/';
+$font-face-exts: woff;
+$font-face-files: (
+  'Light': 300 normal,
+  'Regular': 400 normal,
+  'Medium': 500 normal,
+  'SemiBold': 600 normal,
+  'Bold': 700 normal,
+);
+
+// Fonts
+$font-size-base: 16px;
+$line-height-base: 1.2;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-base: $font-weight-regular;
+$font-weights: (
+  light: $font-weight-light,
+  regular: $font-weight-regular,
+  medium: $font-weight-medium,
+  semibold: $font-weight-semibold,
+  bold: $font-weight-bold,
+);
+$font-family-system: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', 'Segoe UI',
+  'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji';
+$font-family-hds: noto;
+$letter-spacing-base: -0.2px;
+$word-break-base: keep-all;
+$heading-font-color-base: $gray900;
+$text-font-color-base: $gray700;
+$font-colors: (
+  primary: $gray900,
+  secondary: $gray700,
+  tertiary: $gray500,
+  information: $blue600,
+  positive: $green600,
+  caution: $amber600,
+  negative: $red600,
+);
+
+// Fonts-size
+$text-font-size-lg: 18px;
+$text-font-size-md: 16px;
+$text-font-size-sm: 14px;
+$text-font-size-xs: 12px;
+$text-font-size-xxs: 10px;
+$text-line-height-lg: 32px;
+$text-line-height-md: 24px;
+$text-line-height-sm: 24px;
+$text-line-height-xs: 20px;
+$text-line-height-xxs: 16px;
+$text-sizes: (
+  lg: $text-font-size-lg $text-line-height-lg,
+  md: $text-font-size-md $text-line-height-md,
+  sm: $text-font-size-sm $text-line-height-sm,
+  xs: $text-font-size-xs $text-line-height-xs,
+  xxs: $text-font-size-xxs $text-line-height-xxs,
+);
+
+// Heading
+$h1-font-size: 56px;
+$h2-font-size: 48px;
+$h3-font-size: 40px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
+$h1-line-height: 72px;
+$h2-line-height: 64px;
+$h3-line-height: 56px;
+$h4-line-height: 48px;
+$h5-line-height: 40px;
+$h6-line-height: 32px;
+$h1-font-weight: 700;
+$h2-font-weight: 700;
+$h3-font-weight: 600;
+$h4-font-weight: 600;
+$h5-font-weight: 500;
+$h6-font-weight: 500;
+$heading-sizes: (
+  h1: $h1-font-size $h1-line-height $h1-font-weight,
+  h2: $h2-font-size $h2-line-height $h2-font-weight,
+  h3: $h3-font-size $h3-line-height $h3-font-weight,
+  h4: $h4-font-size $h4-line-height $h4-font-weight,
+  h5: $h5-font-size $h5-line-height $h5-font-weight,
+  h6: $h6-font-size $h6-line-height $h6-font-weight,
+);
+
+// Body
+$body-bg: $white;
+$body-font-family: $font-family-hds, $font-family-system;
+$body-font-size: $font-size-base;
+$body-font-color: $black;
+$body-word-break: $word-break-base;
+
+// Layout
+$layout-occupy-start-top: 70px;
+$layout-occupy-start-left: 210px;
+$layout-border-width: 2px;
+$layout-border-wtyle: solid;
+$layout-border-color: $gray200;
+
+// Zindex
+$zindex-backdrop: 1;
+$zindex-focused: 2;
+$zindex-stack: 5;
+$zindex-positioner: 10;
+$zindex-layout-sidebar: 19;
+$zindex-layout-header: 20;
+$zindex-overlay: 90;
+$zindex-toaster: 99;
+
+// Accordion
+$accordion-padding-x: 16px;
+$accordion-padding-y: 16px;
+$accordion-bg: $white;
+$accordion-border-width: 0;
+$accordion-border-color: $gray200;
+$accordion-font-size: 16px;
+$accordion-line-height: 24px;
+$accordion-color: $gray900;
+$accordion-icon-width: 20px;
+$accordion-icon-height: 20px;
+$accordion-icon-bg: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6667 13.3333L10 6.66663L3.33334 13.3333' stroke='%23b7b7b7' stroke-width='1.4' stroke-linecap='square'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.6667 14.1583L10 7.49159L3.33333 14.1583L2.50837 13.3333L10 5.84167L17.4916 13.3333L16.6667 14.1583Z' fill='%23b7b7b7'/%3E%3C/svg%3E%0A");
+$accordion-header-border-width: 1px;
+$accordion-header-border-color: $accordion-border-color;
+$accordion-body-padding-x: $accordion-padding-x;
+$accordion-body-padding-y: $accordion-padding-y;
+$accordion-body-bg: $gray100;
+$accordion-body-border-width: 1px;
+$accordion-body-border-color: $accordion-border-color;
+$accordion-body-color: $gray700;
+$accordion-active-header-border-color: $black;
+$accordion-active-body-border-color: $accordion-border-color;
+$accordion-active-icon-bg: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.33333 5.84174L10 12.5084L16.6667 5.84174L17.4916 6.6667L10 14.1583L2.50838 6.6667L3.33333 5.84174Z' fill='%23111111'/%3E%3C/svg%3E%0A");
+
+// Badges
+$badges-height: 20px;
+$badges-padding-y: 1px;
+$badges-padding-x: 10px;
+$badges-bg: $white;
+$badges-border-width: 1px;
+$badges-border-radius: 8px;
+$badges-color: $white;
+$badges-text-font-size: 12px;
+$badges-text-line-height: 16px;
+
+// Buttons
+$btn-height: 48px;
+$btn-padding-x: 14px;
+$btn-text-font-size: $text-font-size-sm;
+$btn-text-line-height: $text-line-height-sm;
+$btn-text-decoration: none;
+$btn-border-width: 1px;
+$btn-border-style: solid;
+$buttons-sizes: (
+  'lg': (
+    'height': 56px,
+    'padding-x': 18px,
+    'text-font-size': #{$text-font-size-md},
+    'text-line-height': #{$text-line-height-md},
+  ),
+  'md': (
+    'height': 48px,
+    'padding-x': 14px,
+    'text-font-size': #{$text-font-size-sm},
+    'text-line-height': #{$text-line-height-sm},
+  ),
+  'sm': (
+    'height': 32px,
+    'padding-x': 10px,
+    'text-font-size': #{$text-font-size-sm},
+    'text-line-height': #{$text-line-height-sm},
+  ),
+  'xs': (
+    'height': 24px,
+    'padding-x': 6px,
+    'text-font-size': #{$text-font-size-xs},
+    'text-line-height': #{$text-line-height-xs},
+  ),
+);
+
+// Forms
+$form-label-font-size: 14px;
+$form-label-font-line-height: 24px;
+$form-label-color: $gray700;
+
+$input-height: 32px;
+$input-padding-x: 12px;
+$input-padding-y: 6px;
+$input-color: $gray800;
+$input-disabled-color: $gray400;
+$input-disabled-bg: $gray200;
+$input-disabled-border-color: $gray400;
+$form-control-font-size: 14px;
+$form-control-font-line-height: 22px;
+$form-control-zindex: $zindex-focused;
+$form-control-border-width: 1px;
+$form-control-border-color: $gray400;
+$form-control-border-radius: 4px;
+$form-control-focus-border-color: $gray900;
+
+$input-wrap-addon-position: 0;
+$input-wrap-addon-width: 30px;
+$input-wrap-addon-margin: 4px;
+$input-wrap-addon-btn-bg: transparent;
+
+// Icon
+$icon-size: 20px;
+$icon-sizes: (
+  lg: 24px,
+  md: 20px,
+  sm: 16px,
+);
+$icon-color: $black;
+$icon-colors: ();
+$icon-colors: map-merge(
+  (
+    'default': $icon-color,
+    'white': $white,
+    'gray': $gray700,
+    'blue': $blue600,
+    'green': $green600,
+    'amber': $amber600,
+    'red': $red600,
+  ),
+  $icon-colors
+);
+$icon-position: 0;
+
+// Tabs
+$tab-border-width: 1px;
+$tab-border-color: $gray200;
+$tab-link-padding-x: 16px;
+$tab-link-padding-y: 10px;
+$tab-link-color: $blue400;
+$tab-link-text-font-size: $text-font-size-md;
+$tab-link-text-line-height: $text-line-height-md;
+$tab-link-text-margin-x: 2px;
+$tab-link-active-color: $blue700;
+$tab-link-indicator-color: $tab-link-active-color;
+$tab-link-indicator-height: 2px;
+$tab-content-margin-y: 16px;
+$tab-content-padding-x: 10px;
+$tab-pills-link-padding-x: calc(12px - #{$tab-link-text-margin-x});
+$tab-pills-link-padding-y: 4px;
+$tab-pills-link-bg: $gray200;
+$tab-pills-link-gap-x: 4px;
+$tab-pills-border-radius: 16px;
+$tab-pills-link-active-color: $white;
+$tab-pills-link-active-bg: $blue600;
+$tab-pills-link-active-icon-color: $tab-pills-link-active-color;
+$tab-inlines-link-padding-x: calc(#{$tab-link-padding-x} - #{$tab-link-text-margin-x});
+$tab-inlines-link-color: $black;
+$tab-inlines-link-active-color: $blue600;
+$tab-inlines-link-divider-height: 16px;
+$tab-inlines-link-divider-color: $gray300;
+
+// Table
+$table-bg: $white;
+$table-border-width: 1px;
+$table-border-color: $gray200;
+$table-color: $gray700;
+$table-cell-padding-x: 8px;
+$table-cell-padding-y: 10px;
+$table-cell-vertical-align: middle;
+$table-cell-text-align: center;
+$table-cell-font-weight: $font-weight-base;
+$table-th-cell-padding-x: $table-cell-padding-x;
+$table-th-cell-padding-y: $table-cell-padding-y;
+$table-th-cell-color: $gray900;
+$table-th-cell-font-weight: $font-weight-bold;
+$table-active-bg: $gray200;
+$table-hover-bg: $table-active-bg;
+
+// Modal
+$modal-width: 800px;
+$modal-zindex: $zindex-overlay;
+$modal-divider-color: $gray300;
+$modal-border-width: 1px;
+$modal-dialog-margin-y: 16px;
+$modal-dialog-margin-x: auto;
+$modal-content-border-color: $modal-divider-color;
+$modal-content-border-radius: 8px;
+$modal-header-padding-x: 16px;
+$modal-header-padding-y: $modal-header-padding-x;
+$modal-header-border-width: $modal-border-width;
+$modal-header-border-color: $modal-divider-color;
+$modal-header-button-padding-x: 0;
+$modal-header-button-padding-y: $modal-header-button-padding-x;
+$modal-header-button-bg: $white;
+$modal-body-margin-bottom: 16px;
+$modal-body-padding-x: 16px;
+$modal-body-padding-y: $modal-body-padding-x;
+$modal-footer-gap: 8px;
+$modal-footer-padding-x: 12px;
+$modal-footer-padding-y: $modal-footer-padding-x;
+$modal-footer-border-width: $modal-border-width;
+$modal-footer-border-color: $modal-divider-color;
+
+$modal-sizes: (
+  'lg': (
+    'width': 1000px,
+  ),
+  'md': (
+    'width': 800px,
+  ),
+  'sm': (
+    'width': 600px,
+  ),
+);
+
+// Card
+$card-padding-x: 12px;
+$card-padding-y: 12px;
+$card-transition: all 0.15s linear;
+$card-box-shadow: 0 8px 24px 0 #00000026;
+$card-border-radius: 12px;
+$card-border-width: 1px;
+$card-border-color: $gray200;
+$card-thumbnail-margin-y: 8px;
+$card-thumbnail-bg: $blue300;
+$card-thumbnail-border-radius: $card-border-radius;
+$card-title-margin-x: 8px;
+$card-title-font-size: 24px;
+$card-title-line-height: 40px;
+$card-title-color: $gray900;
+$card-text-margin-x: 8px;
+$card-text-font-size: 16px;
+$card-text-line-height: 24px;
+$card-text-color: $gray700;

@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-bg;
+  font-family: $font-family-hds;
+  font-size: $body-font-size;
+  line-height: $line-height-base;
+  font-weight: $font-weight-base;
+  color: $body-font-color;
+  word-break: $body-word-break;
+}
+
+.blind {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: inherit;
+}
