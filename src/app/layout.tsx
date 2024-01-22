@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import React from 'react';
 import '@styles/hds.scss';
 
 import { LayoutHeader, LayoutSidebar, LayoutMain } from '@layout/LayoutIndex';
