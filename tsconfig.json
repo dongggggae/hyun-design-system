@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "strict": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "checkJs": true,
-    "outDir": "dist",
     "skipLibCheck": true,
-    "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "moduleDetection": "force",
     "moduleResolution": "bundler",
     "strictNullChecks": true,
     "resolveJsonModule": true,
@@ -23,15 +24,14 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/hyun-design-system/*"],
+      "@components/*": ["src/components/hyun-design-system"],
       "@layout/*": ["src/components/layout/*"],
       "@styles/*": ["src/styles/*"]
     }
   },
-  "include": ["src", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"],
   "ts-node": {
-    "require": ["tsconfig-paths/register"]
-  }
+    "esm": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src"],
+  "exclude": ["node_modules"]
 }
