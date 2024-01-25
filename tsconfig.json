@@ -8,12 +8,10 @@
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,
-    "noEmit": true,
+    "noEmit": false,
     "esModuleInterop": true,
     "moduleDetection": "force",
-    "moduleResolution": "bundler",
     "strictNullChecks": true,
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
@@ -27,7 +25,9 @@
       "@components/*": ["src/components/hyun-design-system"],
       "@layout/*": ["src/components/layout/*"],
       "@styles/*": ["src/styles/*"]
-    }
+    },
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "ts-node": {
     "esm": true
