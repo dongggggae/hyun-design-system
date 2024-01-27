@@ -18,11 +18,12 @@
         "name": "next"
       }
     ],
-    "baseUrl": "./",
+    "baseUrl": "./app",
     "paths": {
-      "@components/*": ["src/components/hyun-design-system"],
-      "@layout/*": ["src/components/layout/*"],
-      "@styles/*": ["src/styles/*"]
+      "@components/*": ["_components/hyun-design-system"],
+      "@layout/*": ["_components/layout/*"],
+      "@styles/*": ["_styles/*"],
+      "@types/*": ["_types/*"]
     }
   },
   "ts-node": {

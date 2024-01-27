@@ -1,6 +1,6 @@
 // Sidebar
 .sidebar {
-  --#{$prefix}sidebar-width: 210px;
+  --#{$prefix}sidebar-width: #{$layout-sidebar-width};
   --#{$prefix}sidebar-padding-x: 0;
   --#{$prefix}sidebar-padding-y: 0;
   --#{$prefix}sidebar-bg: #{$white};
@@ -115,7 +115,7 @@
 // Header
 .header {
   --#{$prefix}header-width: 100%;
-  --#{$prefix}header-height: 70px;
+  --#{$prefix}header-height: #{$layout-header-height};
   --#{$prefix}header-bg: hsla(0, 0%, 100%, 0.9);
   --#{$prefix}header-border-width: 2px;
   --#{$prefix}header-border-style: solid;
