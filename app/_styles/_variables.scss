@@ -234,8 +234,10 @@ $body-font-color: $black;
 $body-word-break: $word-break-base;
 
 // Layout
-$layout-occupy-start-top: 70px;
-$layout-occupy-start-left: 210px;
+$layout-sidebar-width: 255px;
+$layout-header-height: 70px;
+$layout-occupy-start-top: $layout-header-height;
+$layout-occupy-start-left: $layout-sidebar-width;
 $layout-border-width: 2px;
 $layout-border-wtyle: solid;
 $layout-border-color: $gray200;
