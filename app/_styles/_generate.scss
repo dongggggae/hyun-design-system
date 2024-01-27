@@ -1,3 +1,5 @@
+/* Generate */
+
 // Badge Class genrate
 @each $key, $args in $badges {
   .badge--#{$key} {

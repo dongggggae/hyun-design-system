@@ -1,3 +1,5 @@
+/* Mixins */
+
 // Badge
 @mixin generate-badge($args...) {
   @each $key, $value in keywords($args) {

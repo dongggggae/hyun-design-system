@@ -13,14 +13,5 @@
   "quoteProps": "as-needed",
   "bracketSpacing": true,
   "requirePragma": false,
-  "insertPragma": false,
-  "parser": "typescript",
-  "overrides": [
-    {
-      "files": "*.json",
-      "options": {
-        "parser": "json"
-      }
-    }
-  ]
+  "insertPragma": false
 }
