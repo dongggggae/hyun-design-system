@@ -14,16 +14,18 @@
   --#{$prefix}sidebar-nav-link-height: 48px;
   --#{$prefix}sidebar-nav-link-margin-x: 8px;
   --#{$prefix}sidebar-nav-link-margin-y: 4px;
-  --#{$prefix}sidebar-nav-link-padding-x: 24px;
+  --#{$prefix}sidebar-nav-link-padding-x: 56px;
   --#{$prefix}sidebar-nav-link-bg: transparent;
   --#{$prefix}sidebar-nav-link-border-radius: 8px;
   --#{$prefix}sidebar-nav-link-color: #{$gray700};
   --#{$prefix}sidebar-nav-link-active-color: #{$green600};
   --#{$prefix}sidebar-nav-link-hover-bg: #{$gray150};
   --#{$prefix}sidebar-nav-link-hover-color: #{$green600};
-  --#{$prefix}sidebar-nav-group-padding-x: 16px;
+  --#{$prefix}sidebar-nav-group-padding-x: 48px;
   --#{$prefix}sidebar-nav-group-items-padding-y: 0;
   --#{$prefix}sidebar-nav-group-items-padding-x: 0;
+  --#{$prefix}sidebar-nav-group-menu-button-width: 24px;
+  --#{$prefix}sidebar-nav-group-menu-button-height: 24px;
 
   position: fixed;
   top: #{$layout-occupy-start-top};
@@ -52,14 +54,24 @@
       margin-top: 5px;
       transition: all 0.15s ease-in-out;
 
-      & > .nav__link {
-        display: flex;
-        justify-content: space-between;
+      .menu {
+        position: relative;
 
-        span {
-          margin-right: 5px;
-          .icon {
-            transition: 0.15s ease-in-out;
+        .menu-toggle__button {
+          position: absolute;
+          top: 10px;
+          left: 16px;
+          width: var(--#{$prefix}sidebar-nav-group-menu-button-width);
+          height: var(--#{$prefix}sidebar-nav-group-menu-button-height);
+          background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='-2 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.427 0.427024L3.823 3.82302C3.84628 3.84625 3.86475 3.87383 3.87736 3.90421C3.88996 3.93458 3.89645 3.96714 3.89645 4.00002C3.89645 4.03291 3.88996 4.06547 3.87736 4.09584C3.86475 4.12621 3.84628 4.1538 3.823 4.17702L0.427 7.57302C0.392036 7.60808 0.34745 7.63196 0.298896 7.64164C0.250342 7.65133 0.200005 7.64637 0.154269 7.62742C0.108532 7.60846 0.0694545 7.57635 0.0419902 7.53515C0.0145259 7.49396 -8.81823e-05 7.44553 4.00328e-07 7.39602V0.604024C-8.81823e-05 0.554514 0.0145259 0.506092 0.0419902 0.464898C0.0694545 0.423703 0.108532 0.391591 0.154269 0.372632C0.200005 0.353673 0.250342 0.348722 0.298896 0.358405C0.34745 0.368088 0.392036 0.391971 0.427 0.427024Z' fill='currentcolor'%3E%3C/path%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center center;
+          border-radius: 6px;
+          line-height: 0;
+          z-index: 20;
+
+          &:hover {
+            background-color: $gray150;
           }
         }
       }
@@ -81,7 +93,11 @@
         display: none;
       }
 
-      &.show > .nav__link {
+      &.show .menu .menu-toggle__button {
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 -2 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.57304 0.427L4.17704 3.823C4.15381 3.84628 4.12623 3.86475 4.09585 3.87736C4.06548 3.88996 4.03292 3.89645 4.00004 3.89645C3.96715 3.89645 3.93459 3.88996 3.90422 3.87736C3.87385 3.86475 3.84626 3.84628 3.82304 3.823L0.427037 0.427C0.391983 0.392035 0.368102 0.34745 0.358418 0.298895C0.348734 0.250341 0.353686 0.200005 0.372645 0.154268C0.391603 0.108532 0.423716 0.0694542 0.46491 0.0419899C0.506104 0.0145256 0.554526 -8.84923e-05 0.604037 9.24929e-08L7.39604 3.89381e-07C7.44555 -8.8191e-05 7.49397 0.0145259 7.53516 0.0419902C7.57636 0.0694545 7.60847 0.108532 7.62743 0.154269C7.64639 0.200005 7.65134 0.250342 7.64166 0.298896C7.63197 0.34745 7.60809 0.392036 7.57304 0.427Z' fill='currentcolor'%3E%3C/path%3E%3C/svg%3E");
+      }
+
+      &.show > .menu > .nav__link {
         color: var(--#{$prefix}sidebar-nav-link-active-color);
         font-weight: 700;
 
