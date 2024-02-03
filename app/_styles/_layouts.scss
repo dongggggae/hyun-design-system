@@ -52,7 +52,11 @@
     & .nav__group {
       position: relative;
       margin-top: 5px;
-      transition: all 0.15s ease-in-out;
+
+      &.active > .menu > .nav__link {
+        font-weight: 700;
+        color: var(--#{$prefix}sidebar-nav-link-active-color);
+      }
 
       .menu {
         position: relative;
@@ -81,7 +85,6 @@
         flex-direction: column;
         overflow: hidden;
         padding: var(--#{$prefix}sidebar-nav-group-items-padding-y) var(--#{$prefix}sidebar-nav-group-items-padding-x);
-        transition: height 0.15s ease-in-out;
 
         .nav__link {
           padding-left: var(--#{$prefix}sidebar-nav-link-padding-x);
@@ -95,15 +98,6 @@
 
       &.show .menu .menu-toggle__button {
         background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 -2 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.57304 0.427L4.17704 3.823C4.15381 3.84628 4.12623 3.86475 4.09585 3.87736C4.06548 3.88996 4.03292 3.89645 4.00004 3.89645C3.96715 3.89645 3.93459 3.88996 3.90422 3.87736C3.87385 3.86475 3.84626 3.84628 3.82304 3.823L0.427037 0.427C0.391983 0.392035 0.368102 0.34745 0.358418 0.298895C0.348734 0.250341 0.353686 0.200005 0.372645 0.154268C0.391603 0.108532 0.423716 0.0694542 0.46491 0.0419899C0.506104 0.0145256 0.554526 -8.84923e-05 0.604037 9.24929e-08L7.39604 3.89381e-07C7.44555 -8.8191e-05 7.49397 0.0145259 7.53516 0.0419902C7.57636 0.0694545 7.60847 0.108532 7.62743 0.154269C7.64639 0.200005 7.65134 0.250342 7.64166 0.298896C7.63197 0.34745 7.60809 0.392036 7.57304 0.427Z' fill='currentcolor'%3E%3C/path%3E%3C/svg%3E");
-      }
-
-      &.show > .menu > .nav__link {
-        color: var(--#{$prefix}sidebar-nav-link-active-color);
-        font-weight: 700;
-
-        .icon {
-          transform: rotate(180deg);
-        }
       }
     }
 

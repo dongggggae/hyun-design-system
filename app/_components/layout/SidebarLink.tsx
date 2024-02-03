@@ -1,6 +1,7 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface SidebarLinkProps {
   link: Links;
@@ -10,6 +11,7 @@ interface SidebarLinkProps {
 
 const SidebarLink: React.FC<SidebarLinkProps> = ({ link, menuOpen, onMenuClick }) => {
   const [activeLink, setActiveLink] = useState<string | null>(null);
+  const pathname = usePathname();
 
   const handleActiveLink = (linkName: string) => {
     setActiveLink(linkName);
@@ -20,8 +22,12 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({ link, menuOpen, onMenuClick }
     onMenuClick(event);
   };
 
+  const classes = ['nav__group', pathname === link.href ? 'active' : '', menuOpen ? 'show' : '']
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <li className={`nav__group ${menuOpen ? 'show' : ''}`}>
+    <li className={classes}>
       <div className="menu">
         <button className="menu-toggle__button" onClick={onMenuClick}></button>
         <Link href={link.href} className={`nav__link`} onClick={handleGroupClick}>
@@ -37,7 +43,7 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({ link, menuOpen, onMenuClick }
               <Link
                 key={child.name}
                 href={child.href}
-                className={`nav__link ${activeLink === child.name ? 'active' : ''}`}
+                className={`nav__link ${pathname === child.href ? 'active' : ''}`}
                 onClick={() => handleActiveLink(child.name)}
               >
                 {child.name}
