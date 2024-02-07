@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import classNames from '@utils/classNames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -22,28 +23,24 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({ link, menuOpen, onMenuClick }
     onMenuClick(event);
   };
 
-  const classes = ['nav__group', pathname === link.href ? 'active' : '', menuOpen ? 'show' : '']
-    .filter(Boolean)
-    .join(' ');
-
   return (
-    <li className={classes}>
-      <div className="menu">
-        <button className="menu-toggle__button" onClick={onMenuClick}></button>
-        <Link href={link.href} className={`nav__link`} onClick={handleGroupClick}>
+    <li className={classNames('nav__group', pathname === link.href ? 'active' : '', menuOpen ? 'show' : '')}>
+      <div className={classNames('menu')}>
+        <button className={classNames('menu-toggle__button')} onClick={onMenuClick}></button>
+        <Link href={link.href} className={classNames('nav__link')} onClick={handleGroupClick}>
           {link.name}
         </Link>
       </div>
 
-      <ul className="nav__group-items">
-        <li className="nav__item"></li>
+      <ul className={classNames('nav__group-items')}>
+        <li className={classNames('nav__item')}></li>
         {link.children && (
-          <li className="nav__item">
+          <li className={classNames('nav__item')}>
             {link.children.map((child: Links) => (
               <Link
                 key={child.name}
                 href={child.href}
-                className={`nav__link ${pathname === child.href ? 'active' : ''}`}
+                className={classNames('nav__link', pathname === child.href ? 'active' : '')}
                 onClick={() => handleActiveLink(child.name)}
               >
                 {child.name}

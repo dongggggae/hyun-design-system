@@ -1,8 +1,8 @@
+import className from '@utils/classNames';
 import React from 'react';
 
 const CardText: React.FC<{ text: string }> = ({ text }) => {
-  const PREFIX = 'card__text';
-  return <span className={PREFIX}>{text}</span>;
+  return <span className={className('card__text')}>{text}</span>;
 };
 
 export default CardText;
