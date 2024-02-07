@@ -15,20 +15,21 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
     "baseUrl": "./app",
     "paths": {
-      "@components/*": ["_components/hyun-design-system"],
+      "@components/*": ["_components/hds/*"],
       "@layout/*": ["_components/layout/*"],
       "@styles/*": ["_styles/*"],
-      "@types/*": ["_types/*"]
-    }
+      "@types/*": ["_types/*"],
+      "@utils/*": ["_utils/*"],
+    },
   },
   "ts-node": {
-    "esm": true
+    "esm": true,
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }
