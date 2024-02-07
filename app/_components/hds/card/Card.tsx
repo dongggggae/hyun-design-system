@@ -1,8 +1,9 @@
-import React, { Children } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import CardThumbnail from './CardThumbnail';
 import CardText from './CardText';
 import CardTitle from './CardTitle';
+import className from '@utils/classNames';
 
 interface CardProps {
   to: string;
@@ -10,9 +11,8 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ to, children }) => {
-  const PREFIX = 'card';
   return (
-    <Link href={to} className={PREFIX}>
+    <Link href={to} className={className('card')}>
       {children}
     </Link>
   );
