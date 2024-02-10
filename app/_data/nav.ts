@@ -2,6 +2,16 @@ const navLinks = [
   { name: 'Home', href: '/' },
   {
     type: 'group',
+    name: 'Foundation',
+    href: '/foundation',
+    children: [
+      { name: 'Color', href: '/foundation/color' },
+      { name: 'Heading', href: '/foundation/heading' },
+      { name: 'Text', href: '/foundation/text' },
+    ],
+  },
+  {
+    type: 'group',
     name: 'Components',
     href: '/components',
     children: [
@@ -17,16 +27,6 @@ const navLinks = [
       { name: 'Tab', href: '/components/tab' },
       { name: 'Table', href: '/components/table' },
       { name: 'TextFiled', href: '/components/text-field' },
-    ],
-  },
-  {
-    type: 'group',
-    name: 'Foundation',
-    href: '/foundation',
-    children: [
-      { name: 'Color', href: '/foundation/color' },
-      { name: 'Heading', href: '/foundation/heading' },
-      { name: 'Text', href: '/foundation/text' },
     ],
   },
 ];
