@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CardThumbnail from './CardThumbnail';
 import CardText from './CardText';
 import CardTitle from './CardTitle';
-import className from '@utils/classNames';
+import classNames from '@utils/classNames';
 
 interface CardProps {
   to: string;
@@ -12,7 +12,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ to, children }) => {
   return (
-    <Link href={to} className={className('card')}>
+    <Link href={to} className={classNames('card')}>
       {children}
     </Link>
   );
