@@ -3,46 +3,10 @@
 $badges: ();
 $badges: map-merge(
   (
-    'success': (
-      'bg': $green600,
-      'border-color': $green600,
-      'color': $white,
-    ),
-    'warn': (
-      'bg': $amber600,
-      'border-color': $amber700,
-      'color': $white,
-    ),
-    'error': (
-      'bg': $red600,
-      'border-color': $red600,
-      'color': $white,
-    ),
-    'information': (
-      'bg': $navy600,
-      'border-color': $navy600,
-      'color': $white,
-    ),
-    'outline-success': (
-      'bg': $white,
-      'border-color': $green600,
-      'color': $green600,
-    ),
-    'outline-warn': (
-      'bg': $white,
-      'border-color': $amber700,
-      'color': $amber700,
-    ),
-    'outline-error': (
-      'bg': $white,
-      'border-color': $red600,
-      'color': $red600,
-    ),
-    'outline-information': (
-      'bg': $white,
-      'border-color': $navy600,
-      'color': $navy600,
-    ),
+    'success': $green600,
+    'warnning': $amber600,
+    'error': $red600,
+    'information': $navy600,
   ),
   $badges
 );
@@ -75,5 +39,19 @@ $badges: map-merge(
   text-align: center;
   font-family: inherit;
   white-space: nowrap;
-  vertical-align: text-bottom;
+
+  &__text {
+    margin: 0 2px;
+    font-size: var(--#{$prefix}badge-text-font-size);
+    line-height: var(--#{$prefix}badge-text-line-height);
+    color: var(--#{$prefix}badge-color);
+  }
+
+  @each $size, $object in $badge-sizes {
+    &--#{$size} {
+      @each $prop, $value in $object {
+        --#{$prefix}badge-#{$prop}: #{$value};
+      }
+    }
+  }
 }

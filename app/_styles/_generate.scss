@@ -1,9 +1,12 @@
 /* Generate */
 
 // Badge Class genrate
-@each $key, $args in $badges {
-  .badge--#{$key} {
-    @include generate-badge($args...);
+@each $state, $value in $badges {
+  .badge--#{$state} {
+    @include generate-badge($name: $state, $badge-bg: $value);
+  }
+  .badge__outline--#{$state} {
+    @include generate-outline-badges($name: $state, $badge-color: $value);
   }
 }
 
