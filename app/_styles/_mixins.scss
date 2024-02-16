@@ -1,10 +1,16 @@
 /* Mixins */
 
 // Badge
-@mixin generate-badge($args...) {
-  @each $key, $value in keywords($args) {
-    --#{$prefix}badge-#{$key}: #{$value};
-  }
+@mixin generate-badge($name, $badge-bg, $badge-color: $white) {
+  --#{$prefix}badge-color: #{$badge-color};
+  --#{$prefix}badge-border-color: #{$badge-bg};
+  --#{$prefix}badge-bg: #{$badge-bg};
+}
+
+@mixin generate-outline-badges($name, $badge-color, $badge-bg: $white) {
+  --#{$prefix}badge-color: #{$badge-color};
+  --#{$prefix}badge-border-color: #{$badge-color};
+  --#{$prefix}badge-bg: #{$badge-bg};
 }
 
 // Button

@@ -277,7 +277,7 @@ $accordion-active-body-border-color: $accordion-border-color;
 $accordion-active-icon-bg: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.33333 5.84174L10 12.5084L16.6667 5.84174L17.4916 6.6667L10 14.1583L2.50838 6.6667L3.33333 5.84174Z' fill='%23111111'/%3E%3C/svg%3E%0A");
 
 // Badges
-$badges-height: 20px;
+$badges-height: 28px;
 $badges-padding-y: 1px;
 $badges-padding-x: 10px;
 $badges-bg: $white;
@@ -286,6 +286,25 @@ $badges-border-radius: 8px;
 $badges-color: $white;
 $badges-text-font-size: 12px;
 $badges-text-line-height: 16px;
+$badge-sizes: ();
+$badge-sizes: (
+  'md': (
+    'height': 28px,
+    'padding-y': 1px,
+    'padding-x': 12px,
+    'border-radius': 8px,
+    'text-font-size': $text-font-size-sm,
+    'text-line-height': $text-line-height-sm,
+  ),
+  'sm': (
+    'height': 22px,
+    'padding-y': 0,
+    'padding-x': 5px,
+    'border-radius': 4px,
+    'text-font-size': $text-font-size-xs,
+    'text-line-height': $text-line-height-xs,
+  ),
+);
 
 // Buttons
 $btn-height: 48px;
