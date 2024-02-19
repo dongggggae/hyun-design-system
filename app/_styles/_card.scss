@@ -69,21 +69,32 @@
     font-size: var(--#{$prefix}card-text-font-size);
     line-height: var(--#{$prefix}card-text-line-height);
     color: var(--#{$prefix}card-text-color);
+    white-space: pre-line;
   }
 }
 
 .card-group {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px;
+  gap: 24px;
 }
 
 @media (min-width: 1024px) {
   .card-group {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-group {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 12px;
+    gap: 12px;
   }
   .card__thumbnail {
     height: auto;
