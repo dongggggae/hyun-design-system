@@ -14,7 +14,14 @@ const Text: React.FC<TextProps> = ({ children, tag, size, color, weight }) => {
 
   return React.createElement(
     textTag,
-    { className: classNames(size && `text--${size}`, color && `fc--${color}`, weight && `text--${size}-${weight}`) },
+    {
+      className: classNames(
+        'text',
+        size && `text--${size}`,
+        color && `fc--${color}`,
+        weight && `text--${size}-${weight}`,
+      ),
+    },
     children,
   );
 };
