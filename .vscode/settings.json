@@ -5,6 +5,7 @@
     "_hooks": "Hook",
     "_store": "Container",
     "_styles": "Css",
+    "_themes": "Theme",
     "_types": "Typescript",
     "_utils": "Utils",
     "(route)": "Routes"

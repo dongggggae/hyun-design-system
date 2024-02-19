@@ -20,9 +20,11 @@
     ],
     "baseUrl": "./app",
     "paths": {
+      "@docs/*": ["_components/docs/*"],
       "@components/*": ["_components/hds/*"],
       "@layout/*": ["_components/layout/*"],
       "@styles/*": ["_styles/*"],
+      "@themes/*": ["_themes/*"],
       "@types/*": ["_types/*"],
       "@utils/*": ["_utils/*"],
     },
