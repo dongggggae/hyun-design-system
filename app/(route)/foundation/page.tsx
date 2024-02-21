@@ -1,8 +1,8 @@
 import React from 'react';
 
 import navLinks from '_data/nav';
-import Heading from '@components/Typography/Heading';
-import Text from '@components/Typography/Text';
+import Heading from '@components/typography/Heading';
+import Text from '@components/typography/Text';
 import Card from '@components/card/Card';
 
 const Foundation: React.FC = () => {
