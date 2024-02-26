@@ -1,0 +1,17 @@
+/* Utilities */
+
+$utilities: ();
+$utilities: (
+  'gap': (
+    property: gap,
+    values: $root-space,
+  ),
+  'row-gap': (
+    property: row-gap,
+    values: $root-space,
+  ),
+  'column-gap': (
+    property: column-gap,
+    values: $root-space,
+  ),
+);

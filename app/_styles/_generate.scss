@@ -1,6 +1,11 @@
 /* Generate */
 
-// Badge Class genrate
+// Utilities Class generate
+@each $key, $value in $utilities {
+  @include generate-utility(map-get($value, property), map-get($value, values));
+}
+
+// Badge Class generate
 @each $state, $value in $badges {
   .badge--#{$state} {
     @include generate-badge($name: $state, $badge-bg: $value);

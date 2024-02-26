@@ -1,5 +1,14 @@
 /* Mixins */
 
+// Utilites
+@mixin generate-utility($property, $values) {
+  @each $key, $value in $values {
+    .#{$property}-#{$key} {
+      #{$property}: $value;
+    }
+  }
+}
+
 // Badge
 @mixin generate-badge($name, $badge-bg, $badge-color: $white) {
   --#{$prefix}badge-color: #{$badge-color};
