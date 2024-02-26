@@ -17,9 +17,10 @@ interface ModalProps {
   children: React.ReactNode;
   size?: 'lg' | 'md' | 'sm';
   type?: 'center' | 'scrollable' | 'fullscreen';
+  className?: string | string[];
 }
 
-const Modal: React.FC<ModalProps> = ({ show, onHide, children, size, type }) => {
+const Modal: React.FC<ModalProps> = ({ show, onHide, children, size, type, className }) => {
   const handleClose = () => {
     onHide();
   };
@@ -48,7 +49,13 @@ const Modal: React.FC<ModalProps> = ({ show, onHide, children, size, type }) => 
   return (
     <ModalStateContext.Provider value={modalStateValue}>
       <ModalModifyContext.Provider value={modalModifyValue}>
-        <div className={classNames('modal', show ? 'show' : '')}>
+        <div
+          className={classNames(
+            'modal',
+            show ? 'show' : '',
+            Array.isArray(className) ? className.join(' ') : className,
+          )}
+        >
           <Dialog>
             <Content>{children}</Content>
           </Dialog>

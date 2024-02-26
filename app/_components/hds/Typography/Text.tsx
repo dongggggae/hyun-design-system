@@ -7,9 +7,10 @@ interface TextProps {
   size?: 'lg' | 'md' | 'sm' | 'xs' | 'xxs';
   color?: 'primary' | 'secondary' | 'tertiary' | 'information' | 'positive' | 'caution' | 'negative';
   weight?: 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
+  className?: string | string[];
 }
 
-const Text: React.FC<TextProps> = ({ children, tag, size, color, weight }) => {
+const Text: React.FC<TextProps> = ({ children, tag, size, color, weight, className }) => {
   const textTag = tag || 'p';
 
   return React.createElement(
@@ -20,6 +21,7 @@ const Text: React.FC<TextProps> = ({ children, tag, size, color, weight }) => {
         size && `text--${size}`,
         color && `fc--${color}`,
         weight && `text--${size}-${weight}`,
+        Array.isArray(className) ? className.join(' ') : className,
       ),
     },
     children,
