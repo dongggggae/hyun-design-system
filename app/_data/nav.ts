@@ -22,6 +22,14 @@ const navLinks = [
         ].join('\n'),
       },
       {
+        name: 'Stack',
+        href: '/foundation/stack',
+        info: [
+          `Stack은 균일한 요소와 간격을 사용하여 UI의 체계적인 배열을 도와줍니다.`,
+          `페이지, 컴포넌트의 간격 및 수치를 해당 단위로 맞춰 사용하는 것을 권장합니다.`,
+        ].join('\n'),
+      },
+      {
         name: 'Text',
         href: '/foundation/text',
         info: [

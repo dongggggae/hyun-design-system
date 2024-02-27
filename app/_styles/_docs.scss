@@ -48,7 +48,8 @@
     }
   }
 
-  .docs-table {
+  .docs-table,
+  .docs-stack {
     .code-box {
       display: flex;
       gap: 10px;
@@ -69,12 +70,30 @@
     }
   }
 
+  .docs-stack {
+    .empty-box {
+      background-color: $blue600;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
   .text {
     margin-bottom: 15px;
   }
 
   .component-content {
     margin-bottom: 50px;
+
+    .double-preview {
+      .preview {
+        flex: 1;
+      }
+
+      .code__container {
+        flex: 1;
+      }
+    }
 
     .preview {
       display: flex;
