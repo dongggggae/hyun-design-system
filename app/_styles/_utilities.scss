@@ -14,4 +14,54 @@ $utilities: (
     property: column-gap,
     values: $root-space,
   ),
+  'm': (
+    property: margin,
+    class: m,
+    values: $root-space,
+  ),
+  'mt': (
+    property: margin-top,
+    class: mt,
+    values: $root-space,
+  ),
+  'mr': (
+    property: margin-right,
+    class: mr,
+    values: $root-space,
+  ),
+  'mb': (
+    property: margin-bottom,
+    class: mb,
+    values: $root-space,
+  ),
+  'ml': (
+    property: margin-left,
+    class: ml,
+    values: $root-space,
+  ),
+  'p': (
+    property: padding,
+    class: p,
+    values: $root-space,
+  ),
+  'pt': (
+    property: padding-top,
+    class: pt,
+    values: $root-space,
+  ),
+  'pr': (
+    property: padding-right,
+    class: pr,
+    values: $root-space,
+  ),
+  'pb': (
+    property: padding-bottom,
+    class: pb,
+    values: $root-space,
+  ),
+  'pl': (
+    property: padding-left,
+    class: pl,
+    values: $root-space,
+  ),
 );

@@ -2,7 +2,11 @@
 
 // Utilities Class generate
 @each $key, $value in $utilities {
-  @include generate-utility(map-get($value, property), map-get($value, values));
+  $property: map-get($value, property);
+  $values: map-get($value, values);
+  $property-class: if(map-has-key($value, 'class'), map-get($value, 'class'), null);
+
+  @include generate-utility($property, $values, $property-class);
 }
 
 // Badge Class generate
