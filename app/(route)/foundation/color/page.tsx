@@ -7,7 +7,6 @@ import colors from '@themes/tokens/colors';
 const ColorPage: React.FC = () => {
   const colorKeys = Object.keys(colors);
 
-  console.log(colorKeys);
   return (
     <div className="docs">
       <div className="docs-color">
