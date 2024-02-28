@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Heading from '@components/typography/Heading';
+import Heading from '@components/Typography/Heading';
 
 interface ModalTitleProps {
   text: string;

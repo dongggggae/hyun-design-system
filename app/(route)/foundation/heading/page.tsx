@@ -1,8 +1,8 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-import Heading from '@components/typography/Heading';
-import Text from '@components/typography/Text';
+import Heading from '@components/Typography/Heading';
+import Text from '@components/Typography/Text';
 
 const CodeContainer = dynamic(() => import('@docs/CodeContainer'));
 

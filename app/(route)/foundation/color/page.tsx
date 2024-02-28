@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Heading from '@components/typography/Heading';
-import Text from '@components/typography/Text';
+import Heading from '@components/Typography/Heading';
+import Text from '@components/Typography/Text';
 import colors from '@themes/tokens/colors';
 
 const ColorPage: React.FC = () => {

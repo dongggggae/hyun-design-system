@@ -1,9 +1,9 @@
 import React from 'react';
 
 import navLinks from '_data/nav';
-import Heading from '@components/typography/Heading';
-import Text from '@components/typography/Text';
-import Card from '@components/card/Card';
+import Heading from '@components/Typography/Heading';
+import Text from '@components/Typography/Text';
+import Card from '@components/Card/Card';
 
 const Foundation: React.FC = () => {
   const foundationLinks = navLinks.find((link) => link.name === 'Foundation');
