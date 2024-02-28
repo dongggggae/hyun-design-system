@@ -1,6 +1,7 @@
 /* Utilities */
 
 $utilities: ();
+// prettier-ignore
 $utilities: (
   'gap': (
     property: gap,
@@ -17,51 +18,98 @@ $utilities: (
   'm': (
     property: margin,
     class: m,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'mt': (
     property: margin-top,
     class: mt,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'mr': (
     property: margin-right,
     class: mr,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'mb': (
     property: margin-bottom,
     class: mb,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'ml': (
     property: margin-left,
     class: ml,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'p': (
     property: padding,
     class: p,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'pt': (
     property: padding-top,
     class: pt,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'pr': (
     property: padding-right,
     class: pr,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'pb': (
     property: padding-bottom,
     class: pb,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
   ),
   'pl': (
     property: padding-left,
     class: pl,
-    values: $root-space,
+    values: map-merge($root-space, (auto: auto,)
+    ),
+  ),
+  'bg': (
+    property: background-color,
+    class: bg,
+    values: $root-color,
+  ),
+  'display': (
+    property: display,
+    class: d,
+    values: (
+      inline: inline,
+      inline-block: inline-block,
+      block: block,
+      inline-flex: inline-flex,
+      flex: flex,
+      none: none,
+    ),
+  ),
+  'justify-content': (
+    property: justify-content,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+    ),
+  ),
+  'align-items': (
+    property: align-items,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch,
+    ),
   ),
 );

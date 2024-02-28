@@ -3,12 +3,12 @@
 // Utilites
 @mixin generate-utility($property, $values, $property-class: null) {
   @each $key, $value in $values {
-    .#{$property}-#{$key} {
-      #{$property}: $value;
-    }
-
     @if $property-class {
       .#{$property-class}-#{$key} {
+        #{$property}: $value;
+      }
+    } @else {
+      .#{$property}-#{$key} {
         #{$property}: $value;
       }
     }
