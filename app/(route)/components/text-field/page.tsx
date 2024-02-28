@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextFiledPage: React.FC = () => {
+const TextFiledPage = () => {
   return <div className="docs">TextFiledPage</div>;
 };
 

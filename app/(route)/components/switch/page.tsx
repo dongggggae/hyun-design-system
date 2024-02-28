@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SwitchPage: React.FC = () => {
+const SwitchPage = () => {
   return <div className="docs">SwitchPage</div>;
 };
 

@@ -1,8 +1,6 @@
 import React from 'react';
 
-const AccorionPage: React.FC = () => {
-  const route = '/components/badge';
-
+const AccorionPage = () => {
   return <div className="docs">Accorion Page</div>;
 };
 

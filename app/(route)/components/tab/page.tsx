@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TabPage: React.FC = () => {
+const TabPage = () => {
   return <div className="docs">TabPage</div>;
 };
 

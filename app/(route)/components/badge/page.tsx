@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BadgePage: React.FC = () => {
+const BadgePage = () => {
   return <div className="docs">Badge Page</div>;
 };
 

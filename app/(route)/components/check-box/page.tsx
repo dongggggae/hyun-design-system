@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CheckboxPage: React.FC = () => {
+const CheckboxPage = () => {
   return <div className="docs">CheckboxPage</div>;
 };
 

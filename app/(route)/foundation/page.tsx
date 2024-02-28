@@ -5,7 +5,7 @@ import Heading from '@components/Typography/Heading';
 import Text from '@components/Typography/Text';
 import Card from '@components/Card/Card';
 
-const Foundation: React.FC = () => {
+const Foundation = () => {
   const foundationLinks = navLinks.find((link) => link.name === 'Foundation');
 
   const foundationChildren = foundationLinks?.children || [];

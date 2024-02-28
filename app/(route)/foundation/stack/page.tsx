@@ -7,7 +7,7 @@ import Stack from '@components/Stack/Stack';
 
 const CodeContainer = dynamic(() => import('@docs/CodeContainer'));
 
-const StackPage: React.FC = () => {
+const StackPage = () => {
   return (
     <div className="docs">
       <div className="docs-stack">

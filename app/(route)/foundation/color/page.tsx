@@ -4,7 +4,7 @@ import Heading from '@components/Typography/Heading';
 import Text from '@components/Typography/Text';
 import colors from '@themes/tokens/colors';
 
-const ColorPage: React.FC = () => {
+const ColorPage = () => {
   const colorKeys = Object.keys(colors);
 
   return (

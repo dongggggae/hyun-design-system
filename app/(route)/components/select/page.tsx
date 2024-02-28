@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelectPage: React.FC = () => {
+const SelectPage = () => {
   return <div className="docs">SelectPage</div>;
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconPage: React.FC = () => {
+const IconPage = () => {
   return <div className="docs">IconPage</div>;
 };
 

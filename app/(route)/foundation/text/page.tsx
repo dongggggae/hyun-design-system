@@ -6,7 +6,7 @@ import Text from '@components/Typography/Text';
 
 const CodeContainer = dynamic(() => import('@docs/CodeContainer'));
 
-const TextPage: React.FC = () => {
+const TextPage = () => {
   return (
     <div className="docs">
       <div className="docs-text">

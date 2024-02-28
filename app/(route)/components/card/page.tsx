@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardPage: React.FC = () => {
+const CardPage = () => {
   return <div className="docs">CardPage</div>;
 };
 

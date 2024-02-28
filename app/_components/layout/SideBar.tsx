@@ -4,7 +4,7 @@ import navLinks from '../../_data/nav';
 import SidebarLink from './SidebarLink';
 import classNames from '@utils/classNames';
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
   const [menuOpen, setMenuOpen] = useState<string | null>(null);
 
   const toggleMenu = (menuName: string) => {
