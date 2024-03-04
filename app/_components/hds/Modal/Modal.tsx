@@ -7,7 +7,6 @@ import Dialog from './Dialog';
 import Content from './Content';
 import Header from './Header';
 import Body from './Body';
-
 import Footer from './Footer';
 
 interface ModalProps {
