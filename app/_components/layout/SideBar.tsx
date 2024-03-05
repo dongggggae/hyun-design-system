@@ -1,8 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import navLinks from '../../_data/nav';
-import SidebarLink from './SidebarLink';
+
 import classNames from '@utils/classNames';
+
+import SidebarLink from './SidebarLink';
+import navLinks from '../../_data/nav';
 
 const Sidebar = () => {
   const [menuOpen, setMenuOpen] = useState<string | null>(null);

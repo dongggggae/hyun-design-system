@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
 import dynamic from 'next/dynamic';
+import React from 'react';
 
+import Accordion from '@components/Accordion/Accordion';
 import Heading from '@components/Typography/Heading';
 import Text from '@components/Typography/Text';
-import Accordion from '@components/Accordion/Accordion';
 
 const CodeContainer = dynamic(() => import('@docs/CodeContainer'));
 

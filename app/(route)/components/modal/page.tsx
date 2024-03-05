@@ -1,8 +1,11 @@
 'use client';
 import React from 'react';
-import Modal from '@components/Modal/Modal';
 import { useState } from 'react';
+
 import Btn from '@components/Btn/Btn';
+import Modal from '@components/Modal/Modal';
+
+import classNames from '@utils/classNames';
 
 interface ModalState {
   [key: string]: boolean;

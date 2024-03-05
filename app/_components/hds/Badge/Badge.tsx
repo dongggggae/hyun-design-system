@@ -1,5 +1,7 @@
 import React from 'react';
+
 import classNames from '@utils/classNames';
+
 import BadgeText from './Text';
 
 interface BadgeProps {

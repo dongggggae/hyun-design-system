@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { AccordionStateContext } from './AccordionContext';
+
 import classNames from '@utils/classNames';
+
+import { AccordionStateContext } from './AccordionContext';
 import AccordionHeader from './AccordionHeader';
 import AccordionBody from './AccorionBody';
 

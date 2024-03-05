@@ -1,5 +1,5 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
+import React from 'react';
 
 import Heading from '@components/Typography/Heading';
 import Text from '@components/Typography/Text';

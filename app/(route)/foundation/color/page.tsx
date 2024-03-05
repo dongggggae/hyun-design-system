@@ -2,6 +2,7 @@ import React from 'react';
 
 import Heading from '@components/Typography/Heading';
 import Text from '@components/Typography/Text';
+
 import colors from '@themes/tokens/colors';
 
 const ColorPage = () => {

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Table, TableBody, TableHeader, TableHead, TableData, TableRow } from '@components/Table';
 
 const TablePage = () => {

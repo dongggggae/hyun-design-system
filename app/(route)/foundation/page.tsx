@@ -1,9 +1,10 @@
 import React from 'react';
 
-import navLinks from '_data/nav';
+import Card from '@components/Card/Card';
 import Heading from '@components/Typography/Heading';
 import Text from '@components/Typography/Text';
-import Card from '@components/Card/Card';
+
+import navLinks from '_data/nav';
 
 const Foundation = () => {
   const foundationLinks = navLinks.find((link) => link.name === 'Foundation');

@@ -1,13 +1,15 @@
 'use client';
 import React, { useEffect } from 'react';
-import classNames from '@utils/classNames';
 import { createPortal } from 'react-dom';
-import { ModalStateContext, ModalModifyContext } from './ModalContext';
-import Dialog from './Dialog';
-import Content from './Content';
-import Header from './Header';
+
+import classNames from '@utils/classNames';
+
 import Body from './Body';
+import Content from './Content';
+import Dialog from './Dialog';
 import Footer from './Footer';
+import Header from './Header';
+import { ModalStateContext, ModalModifyContext } from './ModalContext';
 
 interface ModalProps {
   modalKey: string;

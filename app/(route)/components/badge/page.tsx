@@ -1,10 +1,9 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
+import React from 'react';
 
+import Badge from '@components/Badge/Badge';
 import Heading from '@components/Typography/Heading';
 import Text from '@components/Typography/Text';
-import Stack from '@components/Stack/Stack';
-import Badge from '@components/Badge/Badge';
 
 const CodeContainer = dynamic(() => import('@docs/CodeContainer'));
 

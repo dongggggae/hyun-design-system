@@ -1,9 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
-import CardThumbnail from './CardThumbnail';
-import CardText from './CardText';
-import CardTitle from './CardTitle';
+import React from 'react';
+
 import classNames from '@utils/classNames';
+
+import CardText from './CardText';
+import CardThumbnail from './CardThumbnail';
+import CardTitle from './CardTitle';
 
 interface CardProps {
   to: string;

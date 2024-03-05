@@ -1,5 +1,6 @@
-import className from '@utils/classNames';
 import React from 'react';
+
+import className from '@utils/classNames';
 
 const CardThumbnail: React.FC<{ imageUrl?: string }> = ({ imageUrl }) => {
   const thumbnailUrl = {
