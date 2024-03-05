@@ -10,7 +10,6 @@ const TextPage = () => {
   return (
     <div className="docs">
       <div className="docs-text">
-        {/* Overview */}
         <div className="component-content">
           <Heading level="h2" size={2} text="1. 개요" />
           <Text>Text 컴포넌트를 통해 텍스트 요소를 생성합니다.</Text>
@@ -19,8 +18,6 @@ const TextPage = () => {
           </div>
           <CodeContainer codeString={TextCode.overview} />
         </div>
-        {/* //Overview */}
-        {/* Color */}
         <div className="component-content">
           <Heading level="h2" size={2} text="2. Color" />
           <Text>
@@ -52,8 +49,6 @@ const TextPage = () => {
           </div>
           <CodeContainer codeString={TextCode.color} />
         </div>
-        {/* //Color */}
-        {/* Size */}
         <div className="component-content">
           <Heading level="h2" size={2} text="3. Size" />
           <Text>
@@ -70,8 +65,6 @@ const TextPage = () => {
           </div>
           <CodeContainer codeString={TextCode.size} />
         </div>
-        {/* //Size */}
-        {/* Tag */}
         <div className="component-content">
           <Heading level="h2" size={2} text="4. Tag" />
           <Text>
@@ -92,8 +85,6 @@ const TextPage = () => {
           </div>
           <CodeContainer codeString={TextCode.tag} />
         </div>
-        {/* //Tag */}
-        {/* Weight */}
         <div className="component-content">
           <Heading level="h2" size={2} text="5. Weight" />
           <Text>
@@ -118,7 +109,6 @@ const TextPage = () => {
           </div>
           <CodeContainer codeString={TextCode.weight} />
         </div>
-        {/* //Weight */}
       </div>
     </div>
   );

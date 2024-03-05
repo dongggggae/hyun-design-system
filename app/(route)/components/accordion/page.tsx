@@ -12,7 +12,6 @@ const AccorionPage = () => {
   return (
     <div className="docs">
       <div className="docs-accordion">
-        {/* Overview */}
         <div className="component-content">
           <Heading level="h2" size={2} text="1. 개요" />
           <Text>Accordion 컴포넌트를 통해 아코디언 요소를 생성합니다.</Text>
@@ -40,7 +39,6 @@ const AccorionPage = () => {
           </div>
           <CodeContainer codeString={accordionCode.overview} />
         </div>
-        {/* //Overview */}
         <div className="component-content">
           <Heading level="h2" size={2} text="2. Title" />
           <Text>Title 프로퍼티를 통해 아코디언의 제목을 지정할 수 있습니다.</Text>

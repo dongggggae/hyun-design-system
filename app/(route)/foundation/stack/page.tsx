@@ -11,7 +11,6 @@ const StackPage = () => {
   return (
     <div className="docs">
       <div className="docs-stack">
-        {/* Overview */}
         <div className="component-content">
           <Heading level="h2" size={2} text="1. 개요" />
           <Text>Stack 컴포넌트를 통해 스택 요소를 생성합니다.</Text>
@@ -26,8 +25,6 @@ const StackPage = () => {
           </div>
           <CodeContainer codeString={StackCode.overview} />
         </div>
-        {/* //Overview */}
-        {/* Gap */}
         <div className="component-content">
           <Heading level="h2" size={2} text="2. Gap" />
           <Text>Gap 프로퍼티를 통해 스택 요소의 간격을 조정합니다. 기본 값은 &#39;8px&#39; 입니다</Text>
@@ -58,8 +55,6 @@ const StackPage = () => {
             </Stack>
           </Stack>
         </div>
-        {/* //Gap */}
-        {/* Direction */}
         <div className="component-content">
           <Heading level="h2" size={2} text="3. Direction" />
           <Text>Direction 프로퍼티를 통해 스택 요소의 나열 방향을 결정합니다. 기본 값은 &#39;row&#39; 입니다.</Text>
@@ -90,7 +85,6 @@ const StackPage = () => {
             </Stack>
           </Stack>
         </div>
-        {/* //Direction */}
       </div>
     </div>
   );

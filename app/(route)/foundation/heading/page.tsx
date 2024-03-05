@@ -10,7 +10,6 @@ const HeadingPage = () => {
   return (
     <div className="docs">
       <div className="docs-heading">
-        {/* Overview */}
         <div className="component-content">
           <Heading level="h2" size={2} text="1. 개요" />
           <Text>Heading 컴포넌트를 통해 헤더 요소를 생성합니다.</Text>
@@ -20,8 +19,6 @@ const HeadingPage = () => {
           </div>
           <CodeContainer codeString={HeadingCode.overview} />
         </div>
-        {/* //Overview */}
-        {/* Level */}
         <div className="component-content">
           <Heading level="h2" size={2} text="2. Level" />
           <Text>Level 프로퍼티를 통해 렌더링 되는 태그를 변경합니다.</Text>
@@ -35,8 +32,6 @@ const HeadingPage = () => {
           </div>
           <CodeContainer codeString={HeadingCode.level} />
         </div>
-        {/* //Level */}
-        {/* Color */}
         <div className="component-content">
           <Heading level="h2" size={2} text="3. Color" />
           <Text>
@@ -56,8 +51,6 @@ const HeadingPage = () => {
           </div>
           <CodeContainer codeString={HeadingCode.color} />
         </div>
-        {/* //Color */}
-        {/* Size */}
         <div className="component-content">
           <Heading level="h2" size={2} text="4. Size" />
           <Text>
@@ -75,7 +68,6 @@ const HeadingPage = () => {
           </div>
           <CodeContainer codeString={HeadingCode.level} />
         </div>
-        {/* //Size */}
       </div>
     </div>
   );

@@ -11,7 +11,6 @@ const BadgePage = () => {
   return (
     <div className="docs">
       <div className="docs-badge">
-        {/* Overview */}
         <div className="component-content">
           <Heading level="h2" size={2} text="1. 개요" />
           <Text>Badge 컴포넌트를 통해 뱃지 요소를 생성합니다.</Text>
@@ -20,8 +19,6 @@ const BadgePage = () => {
           </div>
           <CodeContainer codeString={badgeCode.overview} />
         </div>
-        {/* Overview */}
-        {/* State */}
         <div className="component-content">
           <Heading level="h2" size={2} text="2. State" />
           <Text>뱃지 스타일은 State 프로퍼티를 통해 변경합니다. 기본 값은 &#39;information&#39; 입니다.</Text>
@@ -33,8 +30,6 @@ const BadgePage = () => {
           </div>
           <CodeContainer codeString={badgeCode.state} />
         </div>
-        {/* State */}
-        {/* Outline */}
         <div className="component-content">
           <Heading level="h2" size={2} text="3. Outline" />
           <Text>뱃지 Outline 프로퍼티를 통해 뱃지의 Outline을 설정합니다. 기본 값은 &#39;false&#39; 입니다.</Text>
@@ -46,8 +41,6 @@ const BadgePage = () => {
           </div>
           <CodeContainer codeString={badgeCode.outline} />
         </div>
-        {/* Outline */}
-        {/* Outline */}
         <div className="component-content">
           <Heading level="h2" size={2} text="4. Size" />
           <Text>Size 프로퍼티를 통해 뱃지 사이즈를 지정하며, 기본 값은 &#39;sm&#39; 입니다.</Text>
@@ -59,7 +52,6 @@ const BadgePage = () => {
           </div>
           <CodeContainer codeString={badgeCode.size} />
         </div>
-        {/* Outline */}
       </div>
     </div>
   );
