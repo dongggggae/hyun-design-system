@@ -26,7 +26,7 @@ const ModalPage = () => {
       <Btn onClick={() => toggleLayerVisible('modal1')} text="modal open" />
 
       <Modal show={modals.modal1} onHide={() => toggleLayerVisible('modal1')} modalKey={'modal1'}>
-        <Modal.Header title="modal" />
+        <Modal.Header title="modal" close />
         <Modal.Body>aaaa</Modal.Body>
         <Modal.Footer>
           <Btn onClick={() => toggleLayerVisible('modal1')} text="modal close" />
