@@ -9,7 +9,7 @@ interface IconProps {
   className?: string | string[];
 }
 
-const Icon: React.FC<IconProps> = ({ name, size, color, className }) => {
+const Icon: React.FC<IconProps> = ({ name, size = 'md', color = 'white', className }) => {
   const PREFIX = 'icon';
 
   return (
@@ -25,11 +25,6 @@ const Icon: React.FC<IconProps> = ({ name, size, color, className }) => {
       <b className="blind">{name}</b>
     </i>
   );
-};
-
-Icon.defaultProps = {
-  size: 'md',
-  color: 'black',
 };
 
 Icon.displayName = 'Icon';
