@@ -1,13 +1,22 @@
+import Image from 'next/image';
 import React from 'react';
 
-import className from '@utils/classNames';
+import classNames from '@utils/classNames';
 
-const CardThumbnail: React.FC<{ imageUrl?: string }> = ({ imageUrl }) => {
-  const thumbnailUrl = {
-    backgroundImage: `url(${imageUrl})`,
-  };
+interface CardThumbnailProps {
+  src: string;
+  fill?: boolean;
+  width?: number;
+  height?: number;
+  alt: string;
+}
 
-  return <div className={className('card__thumbnail')} style={thumbnailUrl}></div>;
+const CardThumbnail: React.FC<CardThumbnailProps> = ({ src, fill, width, height, alt }) => {
+  return (
+    <div className={classNames('card__thumbnail')}>
+      <Image src={src} width={width} height={height} alt={alt} fill={fill} />
+    </div>
+  );
 };
 
 export default CardThumbnail;

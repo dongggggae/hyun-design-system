@@ -473,12 +473,13 @@ $modal-sizes: (
 
 // Card
 $card-padding-x: 12px;
-$card-padding-y: 12px;
+$card-padding-y: 24px;
 $card-transition: all 0.15s linear;
 $card-box-shadow: 0 8px 24px 0 #00000026;
 $card-border-radius: 12px;
 $card-border-width: 1px;
 $card-border-color: $gray200;
+$card-thumbnail-margin-x: 6px;
 $card-thumbnail-margin-y: 8px;
 $card-thumbnail-bg: $blue300;
 $card-thumbnail-border-radius: $card-border-radius;

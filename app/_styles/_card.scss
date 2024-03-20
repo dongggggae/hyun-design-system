@@ -8,8 +8,8 @@
   --#{$prefix}card-border-radius: #{$card-border-radius};
   --#{$prefix}card-transition: #{$card-transition};
   --#{$prefix}card-box-shadow: #{$card-box-shadow};
+  --#{$prefix}card-thumbnail-margin-x: #{$card-thumbnail-margin-x};
   --#{$prefix}card-thumbnail-margin-y: #{$card-thumbnail-margin-y};
-  --#{$prefix}card-thumbnail-bg: #{$card-thumbnail-bg};
   --#{$prefix}card-thumbnail-border-radius: #{$card-thumbnail-border-radius};
   --#{$prefix}card-title-margin-x: #{$card-title-margin-x};
   --#{$prefix}card-title-font-size: #{$card-title-font-size};
@@ -46,13 +46,17 @@
   }
 
   &__thumbnail {
-    overflow: hidden;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+    margin-right: var(--#{$prefix}card-thumbnail-margin-x);
+    margin-left: var(--#{$prefix}card-thumbnail-margin-x);
     margin-bottom: var(--#{$prefix}card-thumbnail-margin-y);
-    border-radius: var(--#{$prefix}card-thumbnail-border-radius);
-    background-color: var(--#{$prefix}card-thumbnail-bg);
-    background-repeat: no-repeat;
-    background-position: center center;
+
+    img {
+      vertical-align: top;
+    }
   }
 
   &__title {
@@ -95,9 +99,5 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 12px;
     gap: 12px;
-  }
-  .card__thumbnail {
-    height: auto;
-    padding-top: 55%;
   }
 }

@@ -30,7 +30,7 @@ const Foundation = () => {
           <div className="card-group">
             {foundationChildren.map((link) => (
               <Card key={link.name} to={link.href}>
-                <Card.Img />
+                <Card.Img src={link.images} width={120} height={90} alt={`${link.name} Thumbnail`} />
                 <Card.Title title={link.name} />
                 <Card.Text text={Array.isArray(link.info) ? link.info[0] : link.info} />
               </Card>
