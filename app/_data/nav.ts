@@ -113,7 +113,7 @@ const navLinks = [
       },
       {
         name: 'Radio',
-        images: '/images/typography.svg',
+        images: '/images/radio.svg',
         href: '/components/radio',
         info: [
           '라디오(Radio)는 사용자가 단일 선택이 필요할 때 활용되는 컴포넌트입니다.',
@@ -122,7 +122,7 @@ const navLinks = [
       },
       {
         name: 'Select',
-        images: '/images/typography.svg',
+        images: '/images/select.svg',
         href: '/components/select',
         info: [
           '셀렉트(Select)는 사용자가 여러 옵션 중 하나의 옵션 선택 시 활용되는 컴포넌트입니다.',
@@ -140,7 +140,7 @@ const navLinks = [
       },
       {
         name: 'Tab',
-        images: '/images/typography.svg',
+        images: '/images/tab.svg',
         href: '/components/tab',
         info: [
           '탭(Tab)은 페이지 내에서 유사한 정보를 그룹화하여 섹션 간 이동 시 사용됩니다.',
