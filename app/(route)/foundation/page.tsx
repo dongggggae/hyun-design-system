@@ -6,14 +6,14 @@ import Text from '@components/Typography/Text';
 
 import navLinks from '_data/nav';
 
-const Foundation = () => {
+const FoundationPage = () => {
   const foundationLinks = navLinks.find((link) => link.name === 'Foundation');
 
-  const foundationChildren = foundationLinks?.children || [];
+  const foundationChild = foundationLinks?.children || [];
 
   return (
     <div className="docs">
-      <div className="layout-foundation">
+      <div className="hds-layout-content">
         <div className="banner-wrap">
           <div className="banner-content">
             <div className="banner">
@@ -28,9 +28,9 @@ const Foundation = () => {
         </div>
         <div className="card-wrap">
           <div className="card-group">
-            {foundationChildren.map((link) => (
+            {foundationChild.map((link) => (
               <Card key={link.name} to={link.href}>
-                <Card.Img src={link.images} width={120} height={90} alt={`${link.name} Thumbnail`} />
+                <Card.Img src={link.images} width={200} height={150} alt={`${link.name} Thumbnail`} />
                 <Card.Title title={link.name} />
                 <Card.Text text={Array.isArray(link.info) ? link.info[0] : link.info} />
               </Card>
@@ -42,4 +42,4 @@ const Foundation = () => {
   );
 };
 
-export default Foundation;
+export default FoundationPage;
