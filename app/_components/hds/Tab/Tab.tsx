@@ -1,8 +1,10 @@
+'use client';
 import React from 'react';
 
 import classNames from '@utils/classNames';
 
 import TabCotent from './TabContent';
+import { useTabModify } from './TabContext';
 import TabItem from './TabItem';
 import TabLink from './TabLink';
 import TabPanel from './TabPanel';
@@ -14,8 +16,10 @@ interface TabProps {
   className?: string | string[];
 }
 
-const Tab: React.FC<TabProps> = ({ children, fill, type, className }) => {
+const Tab: React.FC<TabProps> = ({ children, className }) => {
   const PREFIX = 'tab';
+
+//   const { fill, type } = useTabModify();
 
   const renderTabItem = (child, index) => {
     if (React.isValidElement(child)) {
@@ -35,8 +39,8 @@ const Tab: React.FC<TabProps> = ({ children, fill, type, className }) => {
       <ul
         className={classNames(
           PREFIX,
-          fill ? `${PREFIX}--fill` : '',
-          type && `${PREFIX}--${type}`,
+          //   fill ? `${PREFIX}--fill` : '',
+          //   type && `${PREFIX}--${type}`,
           Array.isArray(className) ? className.join(' ') : className,
         )}
       >

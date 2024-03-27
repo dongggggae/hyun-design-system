@@ -2,7 +2,12 @@ import React from 'react';
 
 import classNames from '@utils/classNames';
 
-const TabItem: React.FC<{ children: React.ReactNode }> = ({ children, title }) => {
+interface TabItemProps {
+  children: React.ReactNode;
+  title: string;
+}
+
+const TabItem: React.FC<TabItemProps> = ({ children, title }) => {
   const PREFIX = 'tab__Item';
 
   return (
