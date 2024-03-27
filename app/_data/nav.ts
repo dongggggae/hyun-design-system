@@ -149,7 +149,7 @@ const navLinks = [
       },
       {
         name: 'Table',
-        images: '/images/typography.svg',
+        images: '/images/table.svg',
         href: '/components/table',
         info: [
           '테이블(Table)은 데이터를 체계적으로 정리하여 시각적으로 정보를 제공합니다.',
