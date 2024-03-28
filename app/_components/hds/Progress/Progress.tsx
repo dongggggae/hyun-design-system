@@ -3,14 +3,14 @@ import React, { useRef, useEffect } from 'react';
 
 import classNames from '@utils/classNames';
 
-interface ProgressBarProps {
+interface ProgressProps {
   now: number;
   label?: boolean;
   state?: 'success' | 'warnning' | 'error' | 'information';
   className?: string | string[];
 }
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ now, label, state = 'success', className }) => {
+const Progress: React.FC<ProgressProps> = ({ now, label, state = 'success', className }) => {
   const PREFIX = 'progress';
   const progressBarRef = useRef<HTMLDivElement>(null);
 
@@ -29,4 +29,4 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ now, label, state = 'success'
   );
 };
 
-export default ProgressBar;
+export default Progress;

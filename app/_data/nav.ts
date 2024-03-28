@@ -112,6 +112,15 @@ const navLinks = [
         ].join('\n'),
       },
       {
+        name: 'Progress',
+        images: '/images/progress.svg',
+        href: '/components/progress',
+        info: [
+          '프로그레스(Progress)는 사용자에게 현재 작업 진행 중인 프로세스의 상태에 대해 안내합니다.',
+          '프로그레스를 통해 작업의 진척도를 제공 받을 수 있습니다.',
+        ].join('\n'),
+      },
+      {
         name: 'Radio',
         images: '/images/radio.svg',
         href: '/components/radio',
