@@ -1,0 +1,37 @@
+.progress {
+  --#{$prefix}progress-height: #{$progress-height};
+  --#{$prefix}progress-bg: #{$progress-bg};
+  --#{$prefix}progress-border-radius: #{$progress-border-radius};
+  --#{$prefix}progress-font-size: #{$progress-font-size};
+  --#{$prefix}progress-color: #{$progress-color};
+
+  display: flex;
+  height: var(--#{$prefix}progress-height);
+  background-color: var(--#{$prefix}progress-bg);
+  border-radius: var(--#{$prefix}progress-border-radius);
+  font-size: var(--#{$prefix}progress-font-size);
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--#{$prefix}progress-color);
+    text-align: center;
+    white-space: nowrap;
+
+    &.success {
+      background-color: $green600;
+    }
+    &.warnning {
+      background-color: $amber600;
+    }
+    &.error {
+      background-color: $red600;
+    }
+    &.information {
+      background-color: $blue600;
+    }
+  }
+}
