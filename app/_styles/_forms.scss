@@ -5,18 +5,43 @@
   align-items: center;
   position: relative;
   width: 100%;
+  padding-right: $form-control-padding-right;
   border: $form-control-border-width solid $form-control-border-color;
   border-radius: $form-control-border-radius;
 
   &:focus-within {
+    padding-right: calc($form-control-padding-right - 1px);
+    border-width: $form-control-focus-border-width;
     border-color: $form-control-focus-border-color;
+
+    .form__control {
+      height: calc($input-height - $form-control-focus-border-width);
+      padding: calc($input-padding-y - 1px) calc($input-padding-y - 1px);
+    }
+  }
+
+  &.is-valid {
+    border-color: $green600;
+  }
+
+  &.is-invalid {
+    border-color: $red600;
+  }
+
+  &.is-valid,
+  &.is-invalid {
+    padding-right: calc($form-control-padding-right - 1px);
+    border-width: $form-control-focus-border-width;
+
+    .form__control {
+      height: calc($input-height - $form-control-focus-border-width);
+      padding: calc($input-padding-y - 1px) calc($input-padding-y - 1px);
+    }
   }
 
   &__addon {
     display: flex;
     align-items: center;
-    margin: $input-wrap-addon-margin;
-    padding-right: 6px;
   }
 }
 
@@ -46,4 +71,33 @@
   font-size: $form-label-font-size;
   line-height: $form-label-font-line-height;
   color: $form-label-color;
+}
+
+.valid-feedback,
+.invalid-feedback {
+  .message {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 2px;
+    margin-top: 4px;
+  }
+}
+.valid-feedback {
+  .message {
+    color: $green600;
+  }
+  .icon {
+    --#{$prefix}icon-color: #{$green600};
+  }
+}
+
+.invalid-feddback {
+  .message {
+    color: $red600;
+  }
+
+  .icon {
+    --#{$prefix}icon-color: #{$red600};
+  }
 }
