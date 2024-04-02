@@ -353,6 +353,7 @@ $input-color: $gray800;
 $input-disabled-color: $gray400;
 $input-disabled-bg: $gray200;
 $input-disabled-border-color: $gray400;
+$form-control-padding-right: 8px;
 $form-control-font-size: 14px;
 $form-control-font-line-height: 22px;
 $form-control-zindex: $zindex-focused;
@@ -360,6 +361,7 @@ $form-control-border-width: 1px;
 $form-control-border-color: $gray400;
 $form-control-border-radius: 4px;
 $form-control-focus-border-color: $gray900;
+$form-control-focus-border-width: 2px;
 
 $input-wrap-addon-position: 0;
 $input-wrap-addon-width: 30px;
@@ -498,4 +500,3 @@ $progress-bg: $gray600;
 $progress-border-radius: 6px;
 $progress-font-size: 12px;
 $progress-color: $white;
-
