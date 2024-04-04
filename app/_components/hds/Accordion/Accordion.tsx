@@ -12,6 +12,7 @@ interface AccorionProps {
 
 const Accordion: React.FC<AccorionProps> = ({ children, className }) => {
   const PREFIX = 'accordion';
+
   return (
     <div className={classNames(PREFIX, Array.isArray(className) ? className.join(' ') : className)}>{children}</div>
   );

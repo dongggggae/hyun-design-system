@@ -10,10 +10,12 @@ interface StackProps {
 }
 
 const Stack: React.FC<StackProps> = ({ children, direction, gap, className }) => {
+  const PREFIX = 'stack';
+
   return (
     <div
       className={classNames(
-        direction && direction == 'row' ? 'h-stack' : 'v-stack',
+        direction && direction == 'row' ? `h-${PREFIX}` : `v-${PREFIX}`,
         gap ? `gap-${gap}` : '',
         Array.isArray(className) ? className.join(' ') : className,
       )}

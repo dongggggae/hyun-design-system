@@ -15,6 +15,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ to, children, className }) => {
   const PREFIX = 'card';
+
   return (
     <Link href={to} className={classNames(PREFIX, Array.isArray(className) ? className.join(' ') : className)}>
       {children}

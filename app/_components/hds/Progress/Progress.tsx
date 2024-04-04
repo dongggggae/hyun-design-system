@@ -12,6 +12,7 @@ interface ProgressProps {
 
 const Progress: React.FC<ProgressProps> = ({ now, label, state = 'success', className }) => {
   const PREFIX = 'progress';
+
   const progressBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

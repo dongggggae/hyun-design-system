@@ -13,12 +13,13 @@ interface TextProps {
 
 const Text: React.FC<TextProps> = ({ children, tag, size, color, weight, className }) => {
   const textTag = tag || 'p';
+  const PREFIX = 'text';
 
   return React.createElement(
     textTag,
     {
       className: classNames(
-        'text',
+        PREFIX,
         size && `text--${size}`,
         color && `fc--${color}`,
         weight && `text--${size}-${weight}`,

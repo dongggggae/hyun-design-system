@@ -22,6 +22,8 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ show, onHide, children, size, type, className }) => {
+  const PREFIX = 'modal';
+
   const handleClose = () => {
     onHide();
   };
@@ -51,11 +53,7 @@ const Modal: React.FC<ModalProps> = ({ show, onHide, children, size, type, class
     <ModalStateContext.Provider value={modalStateValue}>
       <ModalModifyContext.Provider value={modalModifyValue}>
         <div
-          className={classNames(
-            'modal',
-            show ? 'show' : '',
-            Array.isArray(className) ? className.join(' ') : className,
-          )}
+          className={classNames(PREFIX, show ? 'show' : '', Array.isArray(className) ? className.join(' ') : className)}
         >
           <Dialog>
             <Content>{children}</Content>
