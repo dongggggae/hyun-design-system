@@ -1,6 +1,6 @@
 'use client';
 // FormsInput.tsx
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import classNames from '@utils/classNames';
 
@@ -20,6 +20,7 @@ const FormsInput: React.FC<InputProps> = ({ id, type, placeholder, disabled, cla
 
   const { inputText, onChange } = useInput();
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const inputRef = useRef<HTMLInputElement>;
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
