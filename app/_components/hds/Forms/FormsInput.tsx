@@ -1,6 +1,4 @@
-'use client';
-// FormsInput.tsx
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, forwardRef } from 'react';
 
 import classNames from '@utils/classNames';
 
@@ -15,12 +13,15 @@ interface InputProps {
   className?: string | string[];
 }
 
-const FormsInput: React.FC<InputProps> = ({ id, type, placeholder, disabled, className }) => {
+const FormsInput: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
+  { id, type, placeholder, disabled, className },
+  ref,
+) => {
+  const inputRef = useRef<HTMLInputElement>(null);
   const PREFIX = 'form__control';
 
   const { inputText, onChange } = useInput();
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const inputRef = useRef<HTMLInputElement>;
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -49,6 +50,7 @@ const FormsInput: React.FC<InputProps> = ({ id, type, placeholder, disabled, cla
     <div className="input-wrap">
       <input
         id={id}
+        ref={ref}
         type={inputType}
         disabled={disabled}
         onChange={onChange}
@@ -61,4 +63,4 @@ const FormsInput: React.FC<InputProps> = ({ id, type, placeholder, disabled, cla
   );
 };
 
-export default FormsInput;
+export default forwardRef(FormsInput);
