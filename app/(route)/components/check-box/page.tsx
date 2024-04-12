@@ -12,8 +12,10 @@ const CheckboxPage = () => {
   return (
     <div className="docs">
       <form onSubmit={handleSubmit((data) => console.log(data))}>
-        <FormsCheck id="check" {...register('check', { required: '우라라라' })} />
-        {/* <input type="checkbox" className="form__check-input" /> */}
+        <FormsCheck id="check1" type="radio" value="aaa" {...register('check1', { required: 'check' })} />
+        <FormsCheck id="check2" type="radio" value="aaa" {...register('check2', { required: 'check' })} />
+        <FormsCheck id="check3" type="checkbox" {...register('check3', { required: 'check' })} />
+        <FormsCheck id="check4" type="checkbox" {...register('check4', { required: 'check' })} />
         <button type="submit">제출</button>
       </form>
     </div>

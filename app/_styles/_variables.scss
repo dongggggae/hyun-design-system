@@ -368,24 +368,26 @@ $input-wrap-addon-width: 30px;
 $input-wrap-addon-margin: 4px;
 $input-wrap-addon-btn-bg: transparent;
 
-$form-check-width: 20px;
-$form-check-height: 20px;
-$form-check-input-bg: $white;
-$form-check-checked-bg: $green600;
+$form-check-input-width: 20px;
+$form-check-input-height: 20px;
+$form-check-input-input-bg: $white;
+$form-check-input-checked-bg: $green600;
 $form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0175 4.95466L7.01152 12.4611L2.28003 7.49306L3.72831 6.11375L6.99682 9.54568L12.5554 3.59003L14.0175 4.95466Z' /%3E%3C/svg%3E");
-$form-check-border-width: 2px;
-$form-check-border-style: solid;
-$form-check-border-color: $gray350;
-$form-check-border-radius: 2px;
-$form-check-label-font-size: $form-control-font-size;
-$form-check-label-text-line-height: $form-control-text-line-height;
-$form-check-transition:
+$form-check-radio-input-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4' /%3E%3C/svg%3E");
+$form-check-input-border-width: 2px;
+$form-check-input-border-style: solid;
+$form-check-input-border-color: $gray350;
+$form-check-input-border-radius: 2px;
+$form-check-radio-border-radius: 50%;
+$form-check-input-label-font-size: $form-control-font-size;
+$form-check-input-label-text-line-height: $form-control-text-line-height;
+$form-check-input-transition:
   border-color 0.15s ease-in-out,
   background-color 0.15s ease-in-out !default;
-$form-check-disabled-input-bg: $gray250;
-$form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23f5f5f5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0175 4.95466L7.01152 12.4611L2.28003 7.49306L3.72831 6.11375L6.99682 9.54568L12.5554 3.59003L14.0175 4.95466Z' /%3E%3C/svg%3E");
-$form-check-disabled-border-color: $gray300;
-
+$form-check-input-disabled-input-bg: $gray250;
+$form-check-input-disalbed-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23f5f5f5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0175 4.95466L7.01152 12.4611L2.28003 7.49306L3.72831 6.11375L6.99682 9.54568L12.5554 3.59003L14.0175 4.95466Z' /%3E%3C/svg%3E");
+$form-check-input-disabled-border-color: $gray300;
+$form-check-radio-disalbed-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23f5f5f5' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4' /%3E%3C/svg%3E");
 
 // Icon
 $icon-size: 20px;
