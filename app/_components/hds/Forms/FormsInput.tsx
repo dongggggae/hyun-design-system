@@ -22,7 +22,7 @@ const FormsInput = forwardRef<HTMLInputElement, InputProps>(
           type={type}
           disabled={disabled}
           placeholder={placeholder}
-          className={classNames(PREFIX, Array.isArray(className) ? className.join(' ') : className)}
+          className={classNames(PREFIX, className)}
           {...props}
         />
       </div>
