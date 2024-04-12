@@ -54,7 +54,7 @@
   border: none;
   border-radius: $form-control-border-radius;
   font-size: $form-control-font-size;
-  line-height: $form-control-font-line-height;
+  line-height: $form-control-text-line-height;
   color: $input-color;
   outline: none;
   z-index: $form-control-zindex;
@@ -99,5 +99,47 @@
 
   .icon {
     --#{$prefix}icon-color: #{$red600};
+  }
+}
+
+.form__check-input {
+  width: $form-check-width;
+  height: $form-check-height;
+  background-color: $form-check-input-bg;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-width: $form-check-border-width;
+  border-style: $form-check-border-style;
+  border-color: $form-check-border-color;
+  border-radius: $form-check-border-radius;
+  vertical-align: top;
+  transition: $form-check-transition;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:checked {
+    background-color: $form-check-checked-bg;
+    border-color: $form-check-checked-bg;
+
+    &[type='checkbox'] {
+      background-image: $form-check-input-checked-bg-image;
+    }
+  }
+
+  &:disabled {
+    background-color: $form-check-disabled-input-bg;
+    border-color: $form-check-disabled-border-color;
+    pointer-events: none;
+    filter: none;
+
+    &:checked {
+      background-color: $form-check-disabled-input-bg;
+
+      &[type='checkbox'] {
+        background-image: $form-check-input-checked-bg-image;
+      }
+    }
   }
 }
