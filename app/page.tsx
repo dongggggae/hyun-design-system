@@ -1,22 +1,24 @@
 'use client';
+import { DevTool } from '@hookform/devtools';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import Btn from '@components/Btn/Btn';
 import FormsInput from '@components/Forms/FormsInput';
 
+import classNames from '@utils/classNames';
+
 const Home = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const { register, control, handleSubmit } = useForm({
+    mode: 'onChange',
+  });
 
   return (
     <div className="docs">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <FormsInput id="InputText" type="text" placeholder="password" {...register('input', { required: true })} />
-        <button type="submit">제출하기</button>
+      <form onSubmit={handleSubmit((data) => console.log(data))}>
+        <FormsInput id="test" type="text" placeholder="테스트" {...register('test')} />
+        <button type="submit">제출</button>
       </form>
+      {/* <DevTool control={control} /> */}
     </div>
   );
 };
