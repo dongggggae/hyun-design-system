@@ -66,11 +66,10 @@
 }
 
 .form__label {
-  display: inline-block;
-  margin-bottom: 4px;
   font-size: $form-label-font-size;
   line-height: $form-label-font-line-height;
   color: $form-label-color;
+  font-weight: 500;
 }
 
 .valid-feedback,
@@ -186,6 +185,40 @@
         background-image: $form-switch-input-bg-image;
         border-color: $form-switch-input-disalbed-checked-border-color;
       }
+    }
+  }
+}
+
+.form__check {
+  display: inline-block;
+  min-height: 24px;
+  padding-left: $form-check-padding-x;
+
+  .form__check-input {
+    float: left;
+    margin-top: $form-label-margin-y;
+    margin-bottom: $form-label-margin-y;
+    margin-left: calc(-1 * $form-check-margin-x);
+  }
+
+  .form__label {
+    margin-left: $form-label-margin-x;
+  }
+
+  &.reverse {
+    padding-left: 0;
+    padding-right: $form-check-padding-x;
+    text-align: right;
+
+    .form__check-input {
+      float: right;
+      margin-left: 0;
+      margin-right: calc(-1 * $form-check-margin-x);
+    }
+
+    .form__label {
+      margin-left: 0;
+      margin-right: $form-label-margin-x;
     }
   }
 }

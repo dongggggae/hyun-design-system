@@ -403,6 +403,11 @@ $form-switch-input-disabled-bg-image: url("data:image/svg+xml,<svg viewBox='0 0 
 $form-switch-input-disalbed-checked-bg: $gray350;
 $form-switch-input-disalbed-checked-border-color: $gray350;
 
+$form-label-margin-x: 4px;
+$form-label-margin-y: 2px;
+$form-check-margin-x: calc($form-check-input-width + $form-label-margin-x);
+$form-check-padding-x: $form-check-margin-x;
+
 // Icon
 $icon-size: 20px;
 $icon-sizes: (
