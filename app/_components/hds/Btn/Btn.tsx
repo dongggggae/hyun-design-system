@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { ButtonHTMLAttributes, forwardRef } from 'react';
 
 import Icon from '@components/Icon/Icon';
 
@@ -7,7 +7,7 @@ import classNames from '@utils/classNames';
 
 import BtnText from './Text';
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg';
   variant?: 'slolid-grren' | 'solid-red' | 'outline-green' | 'outline-gray' | 'link';
@@ -17,55 +17,50 @@ interface ButtonProps {
   children?: React.ReactNode;
   disabled?: boolean;
   onClick?: () => void;
-  className?: string | string[];
+  className?: string | undefined;
 }
 
-const Btn: React.FC<ButtonProps> = ({
-  text,
-  size,
-  variant,
-  type,
-  icon,
-  iconOnly,
-  children,
-  disabled,
-  onClick,
-  className,
-}) => {
-  const PREFIX = 'btn';
+const Btn = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ text, size, variant, type, icon, iconOnly, children, disabled, onClick, className, ...props }, ref) => {
+    const PREFIX = 'btn';
 
-  const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
-  };
+    const handleClick = () => {
+      if (onClick) {
+        onClick();
+      }
+    };
 
-  return (
-    <button
-      className={classNames(
-        PREFIX,
-        size && `${PREFIX}--${size}`,
-        variant && `${PREFIX}--${variant}`,
-        Array.isArray(className) ? className.join(' ') : className,
-      )}
-      disabled={disabled}
-      type={type}
-      onClick={handleClick}
-    >
-      {!icon && <BtnText text={text} />}
+    return (
+      <button
+        className={classNames(
+          PREFIX,
+          size && `${PREFIX}--${size}`,
+          variant && `${PREFIX}--${variant}`,
+          Array.isArray(className) ? className.join(' ') : className,
+        )}
+        ref={ref}
+        disabled={disabled}
+        type={type}
+        onClick={handleClick}
+        {...props}
+      >
+        {!icon && <BtnText text={text} />}
 
-      {icon && iconOnly && <Icon name={icon} />}
+        {icon && iconOnly && <Icon name={icon} />}
 
-      {icon && !iconOnly && (
-        <React.Fragment>
-          <BtnText text={text} />
-          <Icon name={icon} />
-        </React.Fragment>
-      )}
+        {icon && !iconOnly && (
+          <React.Fragment>
+            <BtnText text={text} />
+            <Icon name={icon} />
+          </React.Fragment>
+        )}
 
-      {children && !iconOnly && <React.Fragment>{children}</React.Fragment>}
-    </button>
-  );
-};
+        {children && !iconOnly && <React.Fragment>{children}</React.Fragment>}
+      </button>
+    );
+  },
+);
+
+Btn.displayName = 'Btn';
 
 export default Btn;
