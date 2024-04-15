@@ -10,7 +10,7 @@ interface HeadingProps {
   className?: string | string[];
 }
 
-const Heading: React.FC<HeadingProps> = ({ text, level, size = 1, color, className }) => {
+const Heading: React.FC<HeadingProps> = ({ text, level = 'h1', size = 1, color, className }) => {
   const headingTag = level || 'h1';
 
   return React.createElement(
@@ -24,11 +24,6 @@ const Heading: React.FC<HeadingProps> = ({ text, level, size = 1, color, classNa
     },
     text,
   );
-};
-
-Heading.defaultProps = {
-  level: 'h1',
-  size: 1,
 };
 
 Heading.displayName = 'Heading';
