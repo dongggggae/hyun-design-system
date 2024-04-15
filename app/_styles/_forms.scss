@@ -105,7 +105,7 @@
 .form__check-input {
   width: $form-check-input-width;
   height: $form-check-input-height;
-  background-color: $form-check-input-input-bg;
+  background-color: $form-check-input-bg;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -154,6 +154,37 @@
 
       &[type='radio'] {
         background-image: $form-check-radio-disalbed-checked-bg-image;
+      }
+    }
+  }
+}
+
+.form__switch {
+  .form__check-input {
+    width: $form-switch-width;
+    background-color: $form-check-input-border-color;
+    background-image: $form-switch-input-bg-image;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: $form-switch-border-radius;
+    transition: $form-switch-input-transition;
+
+    &:checked {
+      background-color: $form-switch-input-checked-bg;
+      background-image: $form-switch-input-bg-image;
+      background-position: 100% 50%;
+    }
+
+    &:disabled {
+      background-color: $form-switch-input-disabled-bg;
+      background-image: $form-switch-input-disabled-bg-image;
+      border-color: $form-switch-input-disabled-bg;
+
+      &:checked {
+        background-color: $form-switch-input-disalbed-checked-bg;
+        background-image: $form-switch-input-bg-image;
+        border-color: $form-switch-input-disalbed-checked-border-color;
       }
     }
   }
