@@ -11,7 +11,7 @@ interface TextProps {
   className?: string | string[];
 }
 
-const Text: React.FC<TextProps> = ({ children, tag, size, color, weight, className }) => {
+const Text: React.FC<TextProps> = ({ children, tag = 'p', size = 'md', color = 'secondary', weight, className }) => {
   const textTag = tag || 'p';
   const PREFIX = 'text';
 
@@ -28,12 +28,6 @@ const Text: React.FC<TextProps> = ({ children, tag, size, color, weight, classNa
     },
     children,
   );
-};
-
-Text.defaultProps = {
-  tag: 'p',
-  size: 'md',
-  color: 'secondary',
 };
 
 Text.displayName = 'Text';
