@@ -1,8 +1,8 @@
-import React, { forwardRef } from 'react';
+import { InputHTMLAttributes, forwardRef } from 'react';
 
 import classNames from '@utils/classNames';
 
-interface InputCheckProps extends React.HTMLProps<HTMLInputElement> {
+interface InputCheckProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
   type?: 'checkbox' | 'radio';
   checkd?: boolean;
