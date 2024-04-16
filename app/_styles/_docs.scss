@@ -84,12 +84,12 @@
     }
   }
 
-  .text {
-    margin-bottom: 15px;
-  }
-
   .component-content {
     margin-bottom: 50px;
+
+    & > .text {
+      margin-bottom: 15px;
+    }
 
     .double-preview {
       .preview {

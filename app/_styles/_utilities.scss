@@ -1,6 +1,6 @@
 /* Utilities */
 
-$utilities: ();
+$utilities: () !default;
 // prettier-ignore
 $utilities: (
   'gap': (
@@ -87,7 +87,7 @@ $utilities: (
       inline: inline,
       inline-block: inline-block,
       block: block,
-      inline-flex: inline-flex,
+      inline-flex: inline-flex, 
       flex: flex,
       none: none,
     ),
