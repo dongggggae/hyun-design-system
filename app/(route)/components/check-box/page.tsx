@@ -9,7 +9,7 @@ import Text from '@components/Typography/Text';
 
 const CodeContainer = dynamic(() => import('@docs/CodeContainer'));
 
-const CheckboxPage = () => {
+const CheckBoxPage = () => {
   const { register, watch } = useForm();
   const checkedValues = watch(['checkBox8', 'checkBox9']);
   const [checkBox8, checkBox9] = checkedValues;
@@ -65,13 +65,13 @@ const CheckboxPage = () => {
                   <FormsCheck id="checkBox9" type="checkbox" label="checkBox9" {...register('checkBox9')} />
                 </Stack>
                 <Text>
-                  checkBox9 :
+                  checkBox8 :
                   <Text tag="span" weight="bold">
                     {checkBox8 ? 'true' : 'false'}
                   </Text>
                 </Text>
                 <Text>
-                  checkBox10 :
+                  checkBox9 :
                   <Text tag="span" weight="bold">
                     {checkBox9 ? 'true' : 'false'}
                   </Text>
@@ -110,7 +110,7 @@ const checkBoxCode = {
   ].join('\n'),
   watch: [
     `const { register, watch } = useForm();`,
-    `const checkedValues = watch(['checkBox9', 'checkBox10']);`,
+    `const checkedValues = watch(['checkBox8', 'checkBox9']);`,
     ``,
     `<form>`,
     ` <FormsCheck id="checkBox8" type="checkbox" label="checkBox8" {...register('checkBox8')} />`,
@@ -119,4 +119,4 @@ const checkBoxCode = {
   ].join('\n'),
 };
 
-export default CheckboxPage;
+export default CheckBoxPage;
