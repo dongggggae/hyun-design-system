@@ -21,9 +21,7 @@ const CheckBoxPage = () => {
           <Heading level="h2" size={2} text="1. 개요" />
           <Text>FormsCheck 컴포넌트를 통해 체크박스 요소를 생성합니다.</Text>
           <div className="preview">
-            <Stack gap={4}>
-              <FormsCheck id="checkBox1" type="checkbox" label="checkBox1" />
-            </Stack>
+            <FormsCheck id="checkBox1" type="checkbox" label="checkBox1" />
           </div>
           <CodeContainer codeString={checkBoxCode.overview} />
         </div>
@@ -56,28 +54,26 @@ const CheckBoxPage = () => {
         </div>
         <div className="component-content">
           <Heading level="h2" size={2} text="4. Watch" />
-          <Text>Watch를 통해 해당 check-box의 상태를 알 수 있습니다.</Text>
+          <Text>Watch를 통해 해당 유저가 선택한 check-box의 상태 값을 알 수 있습니다.</Text>
           <div className="preview">
-            <form>
-              <Stack direction="col" gap={4}>
-                <Stack gap={4}>
-                  <FormsCheck id="checkBox8" type="checkbox" label="checkBox8" {...register('checkBox8')} />
-                  <FormsCheck id="checkBox9" type="checkbox" label="checkBox9" {...register('checkBox9')} />
-                </Stack>
-                <Text>
-                  checkBox8 :
-                  <Text tag="span" weight="bold">
-                    {checkBox8 ? 'true' : 'false'}
-                  </Text>
-                </Text>
-                <Text>
-                  checkBox9 :
-                  <Text tag="span" weight="bold">
-                    {checkBox9 ? 'true' : 'false'}
-                  </Text>
-                </Text>
+            <Stack direction="col" gap={4}>
+              <Stack gap={4}>
+                <FormsCheck id="checkBox8" type="checkbox" label="checkBox8" {...register('checkBox8')} />
+                <FormsCheck id="checkBox9" type="checkbox" label="checkBox9" {...register('checkBox9')} />
               </Stack>
-            </form>
+              <Text>
+                checkBox8 :
+                <Text tag="span" weight="bold">
+                  {checkBox8 ? 'true' : 'false'}
+                </Text>
+              </Text>
+              <Text>
+                checkBox9 :
+                <Text tag="span" weight="bold">
+                  {checkBox9 ? 'true' : 'false'}
+                </Text>
+              </Text>
+            </Stack>
           </div>
           <CodeContainer codeString={checkBoxCode.watch} />
         </div>
@@ -112,10 +108,8 @@ const checkBoxCode = {
     `const { register, watch } = useForm();`,
     `const checkedValues = watch(['checkBox8', 'checkBox9']);`,
     ``,
-    `<form>`,
     ` <FormsCheck id="checkBox8" type="checkbox" label="checkBox8" {...register('checkBox8')} />`,
     ` <FormsCheck id="checkBox9" type="checkbox" label="checkBox9" {...register('checkBox9')} />`,
-    `</form>`,
   ].join('\n'),
 };
 
