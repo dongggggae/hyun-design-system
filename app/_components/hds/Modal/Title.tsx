@@ -7,12 +7,8 @@ interface ModalTitleProps {
   size?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
-const Title: React.FC<ModalTitleProps> = ({ text, size }) => {
+const Title: React.FC<ModalTitleProps> = ({ text, size = 4 }) => {
   return <Heading level="h4" size={size} text={text} />;
-};
-
-Title.defaultProps = {
-  size: 4,
 };
 
 export default Title;
