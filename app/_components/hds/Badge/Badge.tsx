@@ -12,7 +12,7 @@ interface BadgeProps {
   className?: string | string[];
 }
 
-const Badge: React.FC<BadgeProps> = ({ text, size, state, outline, className }) => {
+const Badge: React.FC<BadgeProps> = ({ text, size = 'sm', state = 'success', outline = false, className }) => {
   const PREFIX = 'badge';
 
   return (
@@ -28,12 +28,6 @@ const Badge: React.FC<BadgeProps> = ({ text, size, state, outline, className }) 
       <BadgeText text={text} />
     </span>
   );
-};
-
-Badge.defaultProps = {
-  size: 'sm',
-  state: 'success',
-  outline: false,
 };
 
 Badge.displayName = 'Badge';
