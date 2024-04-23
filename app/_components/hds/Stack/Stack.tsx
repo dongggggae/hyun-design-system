@@ -9,7 +9,7 @@ interface StackProps {
   className?: string | string[];
 }
 
-const Stack: React.FC<StackProps> = ({ children, direction, gap, className }) => {
+const Stack: React.FC<StackProps> = ({ children, direction = 'row', gap = 2, className }) => {
   const PREFIX = 'stack';
 
   return (
@@ -23,11 +23,6 @@ const Stack: React.FC<StackProps> = ({ children, direction, gap, className }) =>
       {children}
     </div>
   );
-};
-
-Stack.defaultProps = {
-  direction: 'row',
-  gap: 2,
 };
 
 Stack.displayName = 'Stack';
