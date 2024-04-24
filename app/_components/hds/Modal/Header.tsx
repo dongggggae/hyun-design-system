@@ -22,7 +22,7 @@ const Header: React.FC<ModalHeaderProps> = ({ title, size, close }) => {
       {close ? (
         <React.Fragment>
           <button onClick={handleClose}>
-            <Icon name="close" />
+            <Icon name="close" color="black" />
           </button>
         </React.Fragment>
       ) : null}

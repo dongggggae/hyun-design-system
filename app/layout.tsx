@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LayoutSidebar></LayoutSidebar>
           <LayoutMain>{children}</LayoutMain>
         </div>
+        <div id="modal-root"></div>
       </body>
     </html>
   );

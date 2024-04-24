@@ -49,18 +49,32 @@ const Modal: React.FC<ModalProps> = ({ show, onHide, children, size, type, class
     type: type || '',
   };
 
+  const selectedElement = document.getElementById('modal-root');
+  if (selectedElement === null) {
+    return <div></div>;
+  }
+
   return (
-    <ModalStateContext.Provider value={modalStateValue}>
-      <ModalModifyContext.Provider value={modalModifyValue}>
-        <div
-          className={classNames(PREFIX, show ? 'show' : '', Array.isArray(className) ? className.join(' ') : className)}
-        >
-          <Dialog>
-            <Content>{children}</Content>
-          </Dialog>
-        </div>
-      </ModalModifyContext.Provider>
-    </ModalStateContext.Provider>
+    <React.Fragment>
+      {createPortal(
+        <ModalStateContext.Provider value={modalStateValue}>
+          <ModalModifyContext.Provider value={modalModifyValue}>
+            <div
+              className={classNames(
+                PREFIX,
+                show ? 'show' : '',
+                Array.isArray(className) ? className.join(' ') : className,
+              )}
+            >
+              <Dialog>
+                <Content>{children}</Content>
+              </Dialog>
+            </div>
+          </ModalModifyContext.Provider>
+        </ModalStateContext.Provider>,
+        selectedElement as HTMLDivElement,
+      )}
+    </React.Fragment>
   );
 };
 
