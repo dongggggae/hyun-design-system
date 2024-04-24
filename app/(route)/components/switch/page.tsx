@@ -85,6 +85,7 @@ const switchCode = {
     `<FormsCheck id="switch3" type="switch" checked disabled />`,
   ].join('\n'),
   watch: [
+    `<!-- Script -->`,
     `const { register, watch } = useForm();`,
     `const checkedValues = watch(['switch6', 'switch7']);`,
     ``,

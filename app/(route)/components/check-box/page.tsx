@@ -105,6 +105,7 @@ const checkBoxCode = {
     `<FormsCheck id="checkBox7" reverse type="checkbox" label="checkBox7" />`,
   ].join('\n'),
   watch: [
+    `<!-- Script -->`,
     `const { register, watch } = useForm();`,
     `const checkedValues = watch(['checkBox8', 'checkBox9']);`,
     ``,
