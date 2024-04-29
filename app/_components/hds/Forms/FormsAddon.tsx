@@ -12,12 +12,6 @@ interface AddonProps {
 const FormsAddon: React.FC<AddonProps> = ({ field, onClick }) => {
   const PREFIX = 'input-wrap__addon';
 
-  const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
-  };
-
   return (
     <div className={classNames(PREFIX)}>
       {field === 'clear' && (
