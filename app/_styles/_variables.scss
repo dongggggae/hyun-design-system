@@ -342,6 +342,8 @@ $buttons-sizes: (
 );
 
 // Forms
+$form-label-margin-x: 4px;
+$form-label-margin-y: 2px;
 $form-label-font-size: 14px;
 $form-label-font-line-height: 24px;
 $form-label-color: $gray700;
@@ -349,6 +351,7 @@ $form-label-color: $gray700;
 $input-height: 32px;
 $input-padding-x: 12px;
 $input-padding-y: 6px;
+$input-bg: $white;
 $input-color: $gray800;
 $input-disabled-color: $gray400;
 $input-disabled-bg: $gray200;
@@ -403,10 +406,22 @@ $form-switch-input-disabled-bg-image: url("data:image/svg+xml,<svg viewBox='0 0 
 $form-switch-input-disalbed-checked-bg: $gray350;
 $form-switch-input-disalbed-checked-border-color: $gray350;
 
-$form-label-margin-x: 4px;
-$form-label-margin-y: 2px;
 $form-check-margin-x: calc($form-check-input-width + $form-label-margin-x);
 $form-check-padding-x: $form-check-margin-x;
+
+$form-select-padding-x: $input-padding-x;
+$form-select-padding-y: $input-padding-y;
+$form-select-bg: $input-bg;
+$form-select-border-width: $form-control-border-width;
+$form-select-border-color: $form-control-border-color;
+$form-select-border-radius: $form-control-border-radius;
+$form-select-color: $input-color;
+$form-select-indicator-padding: 36px;
+$form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3e%3cpath fill='%23111' fill-rule='evenodd' d='M2.667 4.673 8 10.007l5.333-5.334.66.66L8 11.327 2.007 5.333l.66-.66Z' clip-rule='evenodd'/%3e%3c/svg%3e");
+$form-select-bg-size: 16px;
+$form-select-bg-position: right $form-select-padding-x center;
+$form-select-focus-border-width: $form-control-focus-border-width;
+$form-select-focus-border-color: $form-control-focus-border-color;
 
 // Icon
 $icon-size: 20px;

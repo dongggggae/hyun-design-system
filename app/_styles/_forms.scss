@@ -51,6 +51,7 @@
   width: 100%;
   height: $input-height;
   padding: $input-padding-y $input-padding-y;
+  background-color: $input-bg;
   border: none;
   border-radius: $form-control-border-radius;
   font-size: $form-control-font-size;
@@ -58,6 +59,39 @@
   color: $input-color;
   outline: none;
   z-index: $form-control-zindex;
+}
+
+.form__select {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
+  background-color: $form-select-bg;
+  background-image: $form-select-indicator;
+  background-size: $form-select-bg-size;
+  background-position: $form-select-bg-position;
+  background-repeat: no-repeat;
+  border-width: $form-select-border-width;
+  border-style: solid;
+  border-color: $form-select-border-color;
+  border-radius: $form-select-border-radius;
+  font-size: $form-control-font-size;
+  line-height: $form-control-text-line-height;
+  color: $input-color;
+  font-family: inherit;
+  z-index: $form-control-zindex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus {
+    padding: calc($form-select-padding-y - 1px) calc($form-select-indicator-padding - 1px)
+      calc($form-select-padding-y - 1px) calc($form-select-padding-x - 1px);
+      background-position: right calc($form-select-padding-x - 1px) center;
+    border-width: $form-select-focus-border-width;
+    border-color: $form-select-focus-border-color;
+    outline: 0;
+  }
 }
 
 .form-group {
