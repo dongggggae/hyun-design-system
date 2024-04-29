@@ -1,28 +1,16 @@
+'use client';
 import React from 'react';
+import { useForm } from 'react-hook-form';
 
-import Stack from '@components/Stack/Stack';
+import FormsSelect from '@components/Forms/FormsSelect';
 
 const Home = () => {
+  const { register, watch } = useForm();
+  const checkValues = watch('select');
+
   return (
     <div className="docs">
-      <Stack direction="col">
-        <select name="" id="" className="form__select" disabled>
-          <option value="aaa">aaaa</option>
-          <option value="aaa">aaaa</option>
-        </select>
-        <select name="" id="" className="form__select">
-          <option value="aaa">aaaa</option>
-          <option value="aaa">aaaa</option>
-        </select>
-        <select name="" id="" className="form__select is-valid">
-          <option value="aaa">aaaa</option>
-          <option value="aaa">aaaa</option>
-        </select>
-        <select name="" id="" className="form__select is-invalid">
-          <option value="aaa">aaaa</option>
-          <option value="aaa">aaaa</option>
-        </select>
-      </Stack>
+      <FormsSelect id="select" title="폼셀렉트" options={['가나다', '간다', '온다']} {...register('select')} />
     </div>
   );
 };
