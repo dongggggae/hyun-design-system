@@ -342,6 +342,8 @@ $buttons-sizes: (
 );
 
 // Forms
+$form-label-margin-x: 4px;
+$form-label-margin-y: 2px;
 $form-label-font-size: 14px;
 $form-label-font-line-height: 24px;
 $form-label-color: $gray700;
@@ -349,6 +351,7 @@ $form-label-color: $gray700;
 $input-height: 32px;
 $input-padding-x: 12px;
 $input-padding-y: 6px;
+$input-bg: $white;
 $input-color: $gray800;
 $input-disabled-color: $gray400;
 $input-disabled-bg: $gray200;
@@ -385,9 +388,9 @@ $form-check-input-transition:
   border-color 0.15s ease-in-out,
   background-color 0.15s ease-in-out !default;
 $form-check-input-disabled-input-bg: $gray250;
-$form-check-input-disalbed-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23f5f5f5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0175 4.95466L7.01152 12.4611L2.28003 7.49306L3.72831 6.11375L6.99682 9.54568L12.5554 3.59003L14.0175 4.95466Z' /%3E%3C/svg%3E");
+$form-check-input-disabled-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23f5f5f5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0175 4.95466L7.01152 12.4611L2.28003 7.49306L3.72831 6.11375L6.99682 9.54568L12.5554 3.59003L14.0175 4.95466Z' /%3E%3C/svg%3E");
 $form-check-input-disabled-border-color: $gray300;
-$form-check-radio-disalbed-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23f5f5f5' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4' /%3E%3C/svg%3E");
+$form-check-radio-disabled-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23f5f5f5' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4' /%3E%3C/svg%3E");
 $form-switch-width: 32px;
 $form-switch-bg: $form-check-input-border-color;
 $form-switch-border-radius: $form-switch-width;
@@ -400,13 +403,29 @@ $form-switch-input-transition:
 $form-switch-input-disabled-bg: $form-check-input-disabled-input-bg;
 $form-switch-input-disabled-border-color: $form-check-input-disabled-input-bg;
 $form-switch-input-disabled-bg-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23f5f5f5' xmlns='http://www.w3.org/2000/svg'><circle cx='8' cy='8' r='7' /></svg>") !default;
-$form-switch-input-disalbed-checked-bg: $gray350;
-$form-switch-input-disalbed-checked-border-color: $gray350;
+$form-switch-input-disabled-checked-bg: $gray350;
+$form-switch-input-disabled-checked-border-color: $gray350;
 
-$form-label-margin-x: 4px;
-$form-label-margin-y: 2px;
 $form-check-margin-x: calc($form-check-input-width + $form-label-margin-x);
 $form-check-padding-x: $form-check-margin-x;
+
+$form-select-padding-x: $input-padding-x;
+$form-select-padding-y: $input-padding-y;
+$form-select-bg: $input-bg;
+$form-select-border-width: $form-control-border-width;
+$form-select-border-color: $form-control-border-color;
+$form-select-border-radius: $form-control-border-radius;
+$form-select-color: $input-color;
+$form-select-indicator-padding: 36px;
+$form-select-indicator: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.29297 6.20718L3.70718 4.79297L8.00008 9.08586L12.293 4.79297L13.7072 6.20718L8.00008 11.9143L2.29297 6.20718Z' fill='black'/%3E%3C/svg%3E%0A");
+$form-select-bg-size: 16px;
+$form-select-bg-position: right $form-select-padding-x center;
+$form-select-focus-border-width: $form-control-focus-border-width;
+$form-select-focus-border-color: $form-control-focus-border-color;
+$form-select-disabled-indicator: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.29297 6.20718L3.70718 4.79297L8.00008 9.08586L12.293 4.79297L13.7072 6.20718L8.00008 11.9143L2.29297 6.20718Z' fill='%23AFAFAF'/%3E%3C/svg%3E%0A");
+$form-select-disabled-bg: $input-disabled-bg;
+$form-select-disabled-border-color: $form-select-disabled-bg;
+$form-select-disabled-color: $input-disabled-color;
 
 // Icon
 $icon-size: 20px;
