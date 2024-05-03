@@ -1,6 +1,5 @@
 'use client';
 import dynamic from 'next/dynamic';
-import React from 'react';
 import { useForm } from 'react-hook-form';
 
 import FormsCheck from '@components/Forms/FormsCheck';
