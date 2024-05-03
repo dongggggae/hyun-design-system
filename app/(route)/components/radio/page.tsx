@@ -85,7 +85,7 @@ const RadioPage = () => {
               <Text>
                 선택된 Radio :
                 <Text tag="span" weight="bold">
-                  {selectedValue}
+                  {selectedValue === '' ? 'Not Select' : selectedValue}
                 </Text>
               </Text>
             </Stack>
