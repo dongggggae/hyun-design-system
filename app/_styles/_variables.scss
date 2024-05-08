@@ -356,9 +356,9 @@ $input-color: $gray800;
 $input-disabled-color: $gray400;
 $input-disabled-bg: $gray200;
 $input-disabled-border-color: $gray400;
-$form-control-padding-right: 8px;
+$form-control-padding-right: 16px;
 $form-control-font-size: 14px;
-$form-control-text-line-height: 22px;
+$form-control-text-line-height: 20px;
 $form-control-zindex: $zindex-focused;
 $form-control-border-width: 1px;
 $form-control-border-color: $gray400;
@@ -426,6 +426,15 @@ $form-select-disabled-indicator: url("data:image/svg+xml,%3Csvg width='16' heigh
 $form-select-disabled-bg: $input-disabled-bg;
 $form-select-disabled-border-color: $form-select-disabled-bg;
 $form-select-disabled-color: $input-disabled-color;
+
+$form-textarea-padding-x: 16px;
+$form-textarea-padding-y: 16px;
+
+$scrollbar-width: 8px;
+$scrollbar-track-bg: transparent;
+$scrollbar-thumb-bg: $gray700;
+$scrollbar-thumb-border-width: 0px;
+$scrollbar-thumb-border-radius: 8px;
 
 // Icon
 $icon-size: 20px;

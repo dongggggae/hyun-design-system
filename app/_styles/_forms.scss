@@ -16,7 +16,8 @@
 
     .form__control {
       height: calc($input-height - $form-control-focus-border-width);
-      padding: calc($input-padding-y - 1px) calc($input-padding-y - 1px);
+      padding: calc($input-padding-y - 1px);
+      padding-right: $input-padding-y;
     }
   }
 
@@ -42,6 +43,11 @@
   &__addon {
     display: flex;
     align-items: center;
+    position: static;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 3;
   }
 }
 
@@ -55,10 +61,12 @@
   border: none;
   border-radius: $form-control-border-radius;
   font-size: $form-control-font-size;
+  font-weight: 400;
   line-height: $form-control-text-line-height;
   color: $input-color;
   outline: none;
   z-index: $form-control-zindex;
+  appearance: none;
 }
 
 .form__select {
