@@ -1,7 +1,5 @@
 'use client';
 import dynamic from 'next/dynamic';
-import React from 'react';
-import { useForm } from 'react-hook-form';
 
 import FormsInput from '@components/Forms/FormsInput';
 import Stack from '@components/Stack/Stack';
@@ -11,8 +9,6 @@ import Text from '@components/Typography/Text';
 const CodeContainer = dynamic(() => import('@docs/CodeContainer'));
 
 const TextFiledPage = () => {
-  const { register, watch } = useForm();
-
   return (
     <div className="docs">
       <div className="docs-input">
