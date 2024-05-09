@@ -1,5 +1,4 @@
 const navLinks = [
-  { name: 'Home', href: '/' },
   {
     type: 'group',
     name: 'Foundation',
@@ -176,6 +175,7 @@ const navLinks = [
       },
     ],
   },
+  { type: 'group', name: 'Example', href: '/validation', children: [{ name: 'Validation', href: '/validation' }] },
 ];
 
 export default navLinks;
