@@ -12,17 +12,18 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 
 const FormsTextarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ id, state = '', placeholder, disabled, className, ...props }, ref) => {
-    const PREFIX = 'textarea';
+    const PREFIX = 'textarea-wrap';
 
     return (
       <div
         className={classNames(
-          `${PREFIX}-wrap`,
+          PREFIX,
+          className,
           state === 'valid' ? 'is-valid' : '',
           state === 'invalid' ? 'is-invalid' : '',
         )}
       >
-        <textarea id={id} ref={ref} disabled={disabled} className={classNames(PREFIX,'form__control')} {...props} />
+        <textarea id={id} ref={ref} disabled={disabled} className={classNames('form__control')} {...props} />
       </div>
     );
   },

@@ -8,35 +8,24 @@
   padding-right: $form-control-padding-right;
   border: $form-control-border-width solid $form-control-border-color;
   border-radius: $form-control-border-radius;
+  transition: $form-control-transition;
 
   &:focus-within {
-    padding-right: calc($form-control-padding-right - 1px);
-    border-width: $form-control-focus-border-width;
-    border-color: $form-control-focus-border-color;
-
-    .form__control {
-      height: calc($input-height - $form-control-focus-border-width);
-      padding: calc($input-padding-y - 1px);
-      padding-right: $input-padding-y;
-    }
+    border-color: $form-control-border-color;
+    box-shadow: $form-control-focus-box-shadow;
   }
 
   &.is-valid {
-    border-color: $green600;
+    border-color: $form-control-focus-valid-border-color;
+    &:focus-within {
+      box-shadow: $form-control-focus-valid-box-shadow;
+    }
   }
 
   &.is-invalid {
-    border-color: $red600;
-  }
-
-  &.is-valid,
-  &.is-invalid {
-    padding-right: calc($form-control-padding-right - 1px);
-    border-width: $form-control-focus-border-width;
-
-    .form__control {
-      height: calc($input-height - $form-control-focus-border-width);
-      padding: calc($input-padding-y - 1px) calc($input-padding-y - 1px);
+    border-color: $form-control-focus-invalid-border-color;
+    &:focus-within {
+      box-shadow: $form-control-focus-invalid-box-shadow;
     }
   }
 
@@ -64,9 +53,11 @@
   font-weight: 400;
   line-height: $form-control-text-line-height;
   color: $input-color;
-  outline: none;
   z-index: $form-control-zindex;
+  outline: none;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .form__select {
@@ -88,17 +79,15 @@
   color: $input-color;
   font-family: inherit;
   z-index: $form-control-zindex;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  transition: $form-select-transition;
 
   &:focus {
-    padding: calc($form-select-padding-y - 1px) calc($form-select-indicator-padding - 1px)
-      calc($form-select-padding-y - 1px) calc($form-select-padding-x - 1px);
-    background-position: right calc($form-select-padding-x - 1px) center;
-    border-width: $form-select-focus-border-width;
     border-color: $form-select-focus-border-color;
     outline: 0;
+    box-shadow: $form-select-focus-box-shadow;
   }
 
   &:disabled {
@@ -109,22 +98,18 @@
   }
 
   &.is-valid {
-    border-color: $green600;
+    border-color: $form-select-focus-valid-border-color;
+    &:focus {
+      box-shadow: $form-select-focus-valid-box-shadow;
+    }
   }
 
   &.is-invalid {
-    border-color: $red600;
+    border-color: $form-select-focus-invalid-border-color;
+    &:focus {
+      box-shadow: $form-select-focus-invalid-box-shadow;
+    }
   }
-}
-
-.is-valid,
-.is-invalid {
-  &.form__select {
-    padding: calc($form-select-padding-y - 1px) calc($form-select-indicator-padding - 1px)
-      calc($form-select-padding-y - 1px) calc($form-select-padding-x - 1px);
-    background-position: right calc($form-select-padding-x - 1px) center;
-  }
-  border-width: $form-select-focus-border-width;
 }
 
 .form-group {
@@ -286,6 +271,47 @@
     .form__label {
       margin-left: 0;
       margin-right: $form-label-margin-x;
+    }
+  }
+}
+
+.textarea-wrap {
+  overflow: hidden;
+  border: $form-textarea-border-width solid $form-textarea-border-color;
+  border-radius: $form-textarea-border-radius;
+  transition: $form-textarea-transition;
+
+  &:focus-within {
+    border-color: $form-textarea-border-color;
+    box-shadow: $form-textarea-focus-box-shadow;
+  }
+
+  &.is-valid {
+    border-color: $form-textarea-focus-valid-border-color;
+    &:focus-within {
+      box-shadow: $form-textarea-focus-valid-box-shadow;
+    }
+  }
+
+  &.is-invalid {
+    border-color: $form-textarea-focus-invalid-border-color;
+    &:focus-within {
+      box-shadow: $form-textarea-focus-invalid-box-shadow;
+    }
+  }
+
+  textarea {
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: $form-textarea-padding-x;
+    border: 0 none;
+    resize: none;
+
+    &.form__control {
+      min-height: 160px;
     }
   }
 }

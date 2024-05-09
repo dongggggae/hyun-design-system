@@ -363,8 +363,15 @@ $form-control-zindex: $zindex-focused;
 $form-control-border-width: 1px;
 $form-control-border-color: $gray400;
 $form-control-border-radius: 4px;
-$form-control-focus-border-color: $gray900;
-$form-control-focus-border-width: 2px;
+$form-control-focus-border-color: $blue600;
+$form-control-focus-box-shadow: 0 0 0 4px #4d73ff40;
+$form-control-transition:
+  border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out;
+$form-control-focus-valid-border-color: $green600;
+$form-control-focus-valid-box-shadow: 0 0 0 4px #06c75540;
+$form-control-focus-invalid-border-color: $red600;
+$form-control-focus-invalid-box-shadow: 0 0 0 4px #ff334b40;
 
 $input-wrap-addon-position: 0;
 $input-wrap-addon-width: 30px;
@@ -420,15 +427,30 @@ $form-select-indicator-padding: 36px;
 $form-select-indicator: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.29297 6.20718L3.70718 4.79297L8.00008 9.08586L12.293 4.79297L13.7072 6.20718L8.00008 11.9143L2.29297 6.20718Z' fill='black'/%3E%3C/svg%3E%0A");
 $form-select-bg-size: 16px;
 $form-select-bg-position: right $form-select-padding-x center;
-$form-select-focus-border-width: $form-control-focus-border-width;
 $form-select-focus-border-color: $form-control-focus-border-color;
+$form-select-focus-box-shadow: $form-control-focus-box-shadow;
 $form-select-disabled-indicator: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.29297 6.20718L3.70718 4.79297L8.00008 9.08586L12.293 4.79297L13.7072 6.20718L8.00008 11.9143L2.29297 6.20718Z' fill='%23AFAFAF'/%3E%3C/svg%3E%0A");
 $form-select-disabled-bg: $input-disabled-bg;
 $form-select-disabled-border-color: $form-select-disabled-bg;
 $form-select-disabled-color: $input-disabled-color;
+$form-select-transition: $form-control-transition;
+$form-select-focus-valid-border-color: $form-control-focus-valid-border-color;
+$form-select-focus-valid-box-shadow: $form-control-focus-valid-box-shadow;
+$form-select-focus-invalid-border-color: $form-control-focus-invalid-border-color;
+$form-select-focus-invalid-box-shadow: $form-control-focus-invalid-box-shadow;
 
 $form-textarea-padding-x: 16px;
-$form-textarea-padding-y: 16px;
+$form-textarea-padding-y: $form-textarea-padding-x;
+$form-textarea-border-width: $form-control-border-width;
+$form-textarea-border-color: $form-control-border-color;
+$form-textarea-border-radius: $form-control-border-radius;
+$form-textarea-focus-border-color: $form-control-focus-border-color;
+$form-textarea-focus-box-shadow: $form-control-focus-box-shadow;
+$form-textarea-focus-valid-border-color: $form-control-focus-valid-border-color;
+$form-textarea-focus-valid-box-shadow: $form-control-focus-valid-box-shadow;
+$form-textarea-focus-invalid-border-color: $form-control-focus-invalid-border-color;
+$form-textarea-focus-invalid-box-shadow: $form-control-focus-invalid-box-shadow;
+$form-textarea-transition: $form-control-transition;
 
 $scrollbar-width: 8px;
 $scrollbar-track-bg: transparent;
