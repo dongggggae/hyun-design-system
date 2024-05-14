@@ -28,7 +28,7 @@
   --#{$prefix}sidebar-nav-group-menu-button-height: 24px;
 
   position: fixed;
-  top: #{$layout-occupy-start-top};
+  top: 0;
   left: 0;
   bottom: 0;
   width: var(--#{$prefix}sidebar-width);
@@ -141,6 +141,8 @@
 
   position: fixed;
   top: 0;
+  left: #{$layout-occupy-start-left};
+  right: 0;
   width: var(--#{$prefix}header-width);
   height: var(--#{$prefix}header-height);
   background-color: var(--#{$prefix}header-bg);
@@ -152,8 +154,8 @@
   &__inner {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 40px;
+    justify-content: flex-start;
+    padding: 0 20px;
     height: 100%;
   }
 }
