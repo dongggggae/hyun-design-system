@@ -11,7 +11,7 @@
   transition: $form-control-transition;
 
   &:focus-within {
-    border-color: $form-control-border-color;
+    border-color: $form-control-focus-border-color;
     box-shadow: $form-control-focus-box-shadow;
   }
 
