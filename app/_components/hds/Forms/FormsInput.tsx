@@ -20,6 +20,7 @@ const FormsInput = forwardRef<HTMLInputElement, InputProps>(
           'input-wrap',
           state === 'valid' ? 'is-valid' : '',
           state === 'invalid' ? 'is-invalid' : '',
+          className,
         )}
       >
         <input

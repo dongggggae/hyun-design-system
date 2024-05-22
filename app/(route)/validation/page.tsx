@@ -1,18 +1,24 @@
 'use client';
 import { DevTool } from '@hookform/devtools';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm, useFieldArray } from 'react-hook-form';
+
+import FormsInput from '@components/Forms/FormsInput';
+
+import { schema } from '@utils/validate';
 
 type FormValues = {
   username: string;
   email: string;
-  social: {
-    github: string;
-    twitter: string;
-  };
-  phoneNumbers: string[];
-  phNumbers: {
-    number: string;
-  }[];
+  password: string;
+  // social: {
+  //   github: string;
+  //   twitter: string;
+  // };
+  // phoneNumbers: string[];
+  // phNumbers: {
+  //   number: string;
+  // }[];
 };
 
 export default function ValidationPage() {
@@ -20,40 +26,56 @@ export default function ValidationPage() {
     register,
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, touchedFields, isValid, isDirty, dirtyFields, isSubmitted },
   } = useForm<FormValues>({
     defaultValues: {
-      username: 'IU',
+      username: '',
       email: '',
-      social: {
-        github: '',
-        twitter: '',
-      },
-      phoneNumbers: ['', ''],
-      phNumbers: [{ number: '' }],
+      password: '',
+      // email: '',
+      // social: {
+      //   github: '',
+      //   twitter: '',
+      // },
+      // phoneNumbers: ['', ''],
+      // phNumbers: [{ number: '' }],
     },
+    resolver: yupResolver(schema) as any,
   });
 
   const onSubmit = (data: any) => {
     console.log(data);
+    console.log('a');
   };
 
-  const { fields, append, remove } = useFieldArray({
-    name: 'phNumbers',
-    control: control,
-  });
+  // console.log(isDirty, isValid);
+  const validationState = () => {
+    
+  }
 
   return (
     <div className="docs">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
+          <FormsInput id="test" type="text" {...register('username')} />
+          <p>{errors.username?.message}</p>
+        </div>
+        {/* <div>
           <label htmlFor="userName">UserName</label>
           <input type="text" id="username" {...register('username')} />
-        </div>
-        <div>
+          <p>{errors.username?.message}</p>
+        </div> */}
+        {/* <div>
           <label htmlFor="email">E-mail</label>
           <input type="text" id="email" {...register('email')} />
+          <p>{errors.email?.message}</p>
         </div>
+        <div>
+          <label htmlFor="password">password</label>
+          <input type="password" id="password" {...register('password')} />
+          <p>{errors.password?.message}</p>
+        </div> */}
+        {/* 
         <div>
           <label htmlFor="github">Github</label>
           <input type="text" id="github" {...register('social.github')} />
@@ -89,7 +111,7 @@ export default function ValidationPage() {
               Add phone number
             </button>
           </div>
-        </div>
+        </div> */}
         <button>Submit</button>
         <DevTool control={control} />
       </form>

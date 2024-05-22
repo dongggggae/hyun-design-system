@@ -10,9 +10,11 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.4.2",
     "next": "^14.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
