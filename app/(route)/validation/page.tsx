@@ -3,6 +3,9 @@ import { DevTool } from '@hookform/devtools';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm, useFieldArray } from 'react-hook-form';
 
+import Input from '@components/Forms/Input';
+import FormsFeedback from '@components/Forms/FormsFeedback';
+import FormsLabel from '@components/Forms/FormsLabel';
 import FormsInput from '@components/Forms/FormsInput';
 
 import { schema } from '@utils/validate';
@@ -40,26 +43,19 @@ export default function ValidationPage() {
       // phoneNumbers: ['', ''],
       // phNumbers: [{ number: '' }],
     },
+    mode: 'onBlur',
     resolver: yupResolver(schema) as any,
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
-    console.log('a');
+    console.log(errors);
   };
-
-  // console.log(isDirty, isValid);
-  const validationState = () => {
-    
-  }
 
   return (
     <div className="docs">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <FormsInput id="test" type="text" {...register('username')} />
-          <p>{errors.username?.message}</p>
-        </div>
+        <FormsInput id="username" label="라벨" feedback={errors.username?.message} {...register('username')} />
+        {!!errors.username}
         {/* <div>
           <label htmlFor="userName">UserName</label>
           <input type="text" id="username" {...register('username')} />
@@ -112,8 +108,9 @@ export default function ValidationPage() {
             </button>
           </div>
         </div> */}
-        <button>Submit</button>
+
         <DevTool control={control} />
+        <button>Submit</button>
       </form>
     </div>
   );

@@ -118,6 +118,8 @@
 }
 
 .form__label {
+  display: flex;
+  margin-bottom: 4px;
   font-size: $form-label-font-size;
   line-height: $form-label-font-line-height;
   color: $form-label-color;
@@ -143,7 +145,7 @@
   }
 }
 
-.invalid-feddback {
+.invalid-feedback {
   .message {
     color: $red600;
   }
