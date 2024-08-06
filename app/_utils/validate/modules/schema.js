@@ -16,6 +16,6 @@ export const schema = yup.object({
   password: yup.string().matches(regExp.password, messages.password).required('비밀번호를 입력해주세요.'),
   phone: yup
     .string()
-    .matches(regExp.phone, '유효한 전화번호 형식을 입력해주세요. (예: 010-1234-5678)')
+    .matches(regExp.phone, '유효한 전화번호 형식을 입력해주세요. (예: 01012345678)')
     .required('전화번호를 입력해주세요.'),
 });
