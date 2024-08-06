@@ -175,7 +175,15 @@ const navLinks = [
       },
     ],
   },
-  { type: 'group', name: 'Example', href: '/validation', children: [{ name: 'Validation', href: '/validation' }] },
+  {
+    type: 'group',
+    name: 'Example',
+    href: '/validation',
+    children: [
+      { name: 'Default Validation', href: '/validation/default' },
+      { name: 'Array Validation', href: '/validation/array' },
+    ],
+  },
 ];
 
 export default navLinks;
