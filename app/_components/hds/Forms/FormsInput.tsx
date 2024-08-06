@@ -1,40 +1,28 @@
-import React, { InputHTMLAttributes, forwardRef } from 'react';
+import React from 'react';
 
 import classNames from '@utils/classNames';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  id: string;
-  type?: 'text' | 'password' | 'search';
-  state?: '' | 'valid' | 'invalid';
-  placeholder?: string;
-  disabled?: boolean;
-  className?: string | undefined;
-}
-const FormsInput = forwardRef<HTMLInputElement, InputProps>(
-  ({ id, type = 'text', state = '', placeholder, disabled, className, ...props }, ref) => {
-    const PREFIX = 'form__control';
+import FormsFeedback from './FormsFeedback';
+import FormsLabel from './FormsLabel';
+import Input from './Input';
 
-    return (
-      <div
-        className={classNames(
-          'input-wrap',
-          state === 'valid' ? 'is-valid' : '',
-          state === 'invalid' ? 'is-invalid' : '',
-        )}
-      >
-        <input
-          id={id}
-          ref={ref}
-          type={type}
-          disabled={disabled}
-          placeholder={placeholder}
-          className={PREFIX}
-          {...props}
-        />
-      </div>
-    );
-  },
-);
+interface FormsInputProps {
+  id: string;
+  label: string;
+  state?: '' | 'valid' | 'invalid';
+  feedback?: string;
+  feedbackValidation?: '' | 'valid' | 'invalid';
+}
+
+const FormsInput: React.FC<FormsInputProps> = ({ id, label, state = '', feedback, ...props }) => {
+  return (
+    <div className="forms-wrap">
+      {label && <FormsLabel htmlFor={id}>{label}</FormsLabel>}
+      <Input id={id} {...props} state={state} />
+      {feedback && <FormsFeedback state={state}>{feedback}</FormsFeedback>}
+    </div>
+  );
+};
 
 FormsInput.displayName = 'FormsInput';
 
