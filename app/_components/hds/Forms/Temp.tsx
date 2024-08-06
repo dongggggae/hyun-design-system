@@ -3,7 +3,7 @@ import React, { useState, useRef, forwardRef } from 'react';
 import classNames from '@utils/classNames';
 
 import FormsAddon from './FormsAddon';
-import useInput from './FormsContext';
+// import useInput from './FormsContext';
 
 interface InputProps {
   id: string;
