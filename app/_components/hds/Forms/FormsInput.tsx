@@ -7,7 +7,7 @@ import FormsLabel from './FormsLabel';
 
 interface FormsInputProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
-  label: string;
+  label?: string;
   value?: any;
   type?: 'text' | 'password' | 'search';
   state?: '' | 'valid' | 'invalid';

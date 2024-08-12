@@ -173,15 +173,15 @@ const navLinks = [
           '한 줄 입력인 텍스트 필드(Text Field)와 여러 줄 입력인 텍스트 영역(Text Area)으로 나뉩니다.',
         ].join('\n'),
       },
-    ],
-  },
-  {
-    type: 'group',
-    name: 'Example',
-    href: '/validation',
-    children: [
-      { name: 'Default Validation', href: '/validation/default' },
-      { name: 'Array Validation', href: '/validation/array' },
+      {
+        name: 'Validation',
+        images: '/images/textfiled.svg',
+        href: '/components/validation',
+        info: [
+          'ReactHookForm과 Yup 라이브러리를 통해 Form 유효성 검사를 실행합니다.',
+          '이를 통해 유효하지 않는 입력에 대해 사용자에게 실시간으로 피드백을 제공할 수 있습니다',
+        ].join('\n'),
+      },
     ],
   },
 ];
