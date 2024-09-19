@@ -21,7 +21,13 @@ interface ModalProps {
   className?: string | string[];
 }
 
-const Modal: React.FC<ModalProps> = ({ show, onHide, children, size, type, className }) => {
+interface ModalComponent extends React.FC<ModalProps> {
+  Header: typeof Header;
+  Body: typeof Body;
+  Footer: typeof Footer;
+}
+
+const Modal: ModalComponent = ({ show, onHide, children, size, type, className }) => {
   const PREFIX = 'modal';
 
   const handleClose = () => {
@@ -80,8 +86,8 @@ const Modal: React.FC<ModalProps> = ({ show, onHide, children, size, type, class
 
 Modal.displayName = 'Modal';
 
-export default Object.assign(Modal, {
-  Header: Header,
-  Body: Body,
-  Footer: Footer,
-});
+Modal.Header = Header;
+Modal.Body = Body;
+Modal.Footer = Footer;
+
+export default Modal;

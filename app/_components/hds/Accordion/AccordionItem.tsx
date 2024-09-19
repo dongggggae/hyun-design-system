@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 
 import classNames from '@utils/classNames';
 
+import AccordionBody from './AccordionBody';
 import { AccordionStateContext } from './AccordionContext';
 import AccordionHeader from './AccordionHeader';
-import AccordionBody from './AccorionBody';
 
 interface AccordionItemProps {
   title: string;

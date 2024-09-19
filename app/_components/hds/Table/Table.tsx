@@ -14,7 +14,15 @@ interface TableProps {
   hover?: boolean;
 }
 
-const Table: React.FC<TableProps> = ({ children, caption, hover }) => {
+interface TableComponent extends React.FC<TableProps> {
+  Head: typeof TableHead;
+  HeaderCell: typeof TableHeader;
+  Row: typeof TableRow;
+  Body: typeof TableBody;
+  DataCell: typeof TableData;
+}
+
+const Table: TableComponent = ({ children, caption, hover }) => {
   const PREFIX = 'table';
 
   return (
@@ -27,10 +35,10 @@ const Table: React.FC<TableProps> = ({ children, caption, hover }) => {
 
 Table.displayName = 'Table';
 
-export default Object.assign(Table, {
-  Head: TableHead,
-  HeaderCell: TableHeader,
-  Row: TableRow,
-  Body: TableBody,
-  DataCell: TableData,
-});
+Table.Head = TableHead;
+Table.HeaderCell = TableHeader;
+Table.Row = TableRow;
+Table.Body = TableBody;
+Table.DataCell = TableData;
+
+export default Table;

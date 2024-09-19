@@ -10,7 +10,11 @@ interface AccorionProps {
   className?: string | string[];
 }
 
-const Accordion: React.FC<AccorionProps> = ({ children, className }) => {
+interface AccordionComponent extends React.FC<AccorionProps> {
+  Item: typeof AccordionItem;
+}
+
+const Accordion: AccordionComponent = ({ children, className }) => {
   const PREFIX = 'accordion';
 
   return (
@@ -18,6 +22,6 @@ const Accordion: React.FC<AccorionProps> = ({ children, className }) => {
   );
 };
 
-export default Object.assign(Accordion, {
-  Item: AccordionItem,
-});
+Accordion.Item = AccordionItem;
+
+export default Accordion;

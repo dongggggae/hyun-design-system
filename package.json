@@ -1,11 +1,17 @@
 {
-  "name": "hyun-desing-system",
-  "version": "0.1.0",
-  "private": true,
+  "name": "hyun-design-system",
+  "version": "1.0.0",
   "type": "module",
+  "keywords": [
+    "design-system, react-component"
+  ],
+  "author": {
+    "name": "hyun",
+    "email": "k01077584867@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "tsc && next build",
     "start": "next start",
     "lint": "next lint --fix"
   },
@@ -34,6 +40,10 @@
     "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.75.0",
     "sass-loader": "^14.2.0",
-    "typescript": "^5"
-  }
+    "tsc": "^2.0.4",
+    "typescript": "^5.6.2"
+  },
+  "files": [
+    "dist"
+  ]
 }

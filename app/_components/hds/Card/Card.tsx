@@ -13,7 +13,13 @@ interface CardProps {
   className?: string | string[];
 }
 
-const Card: React.FC<CardProps> = ({ to, children, className }) => {
+interface CardComponent extends React.FC<CardProps> {
+  Img: typeof CardThumbnail;
+  Title: typeof CardTitle;
+  Text: typeof CardText;
+}
+
+const Card: CardComponent = ({ to, children, className }) => {
   const PREFIX = 'card';
 
   return (
@@ -23,8 +29,8 @@ const Card: React.FC<CardProps> = ({ to, children, className }) => {
   );
 };
 
-export default Object.assign(Card, {
-  Img: CardThumbnail,
-  Title: CardTitle,
-  Text: CardText,
-});
+Card.Img = CardThumbnail;
+Card.Title = CardTitle;
+Card.Text = CardText;
+
+export default Card;

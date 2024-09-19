@@ -6,6 +6,9 @@
     "outDir": "dist",
     "strict": true,
     "noEmit": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "declaration": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -15,8 +18,8 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next",
-      },
+        "name": "next"
+      }
     ],
     "baseUrl": "./app",
     "paths": {
@@ -26,12 +29,12 @@
       "@styles/*": ["_styles/*"],
       "@themes/*": ["_themes/*"],
       "@types/*": ["_types/*"],
-      "@utils/*": ["_utils/*"],
-    },
+      "@utils/*": ["_utils/*"]
+    }
   },
   "ts-node": {
-    "esm": true,
+    "esm": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }
