@@ -1,6 +1,6 @@
 {
   "name": "hyun-design-system",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "type": "module",
   "keywords": [
     "design-system, react-component"
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && mkdir -p dist/components/hds && cp -r app/_components/hds/* dist/components/hds && mkdir -p dist/utils && cp -r app/_utils/* dist/utils && mkdir -p dist/styles && cp -r app/_styles/* dist/styles",
     "start": "next start",
     "lint": "next lint --fix"
   },

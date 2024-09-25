@@ -5,6 +5,7 @@ import classNames from '@utils/classNames';
 
 import AccordionItem from './AccordionItem';
 
+import '@styles/hds.scss';
 interface AccorionProps {
   children: React.ReactNode;
   className?: string | string[];
